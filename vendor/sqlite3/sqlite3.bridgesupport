@@ -1,0 +1,2866 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<struct name='sqlite3_api_routines' type='{sqlite3_api_routines=&quot;aggregate_context&quot;^?&quot;aggregate_count&quot;^?&quot;bind_blob&quot;^?&quot;bind_double&quot;^?&quot;bind_int&quot;^?&quot;bind_int64&quot;^?&quot;bind_null&quot;^?&quot;bind_parameter_count&quot;^?&quot;bind_parameter_index&quot;^?&quot;bind_parameter_name&quot;^?&quot;bind_text&quot;^?&quot;bind_text16&quot;^?&quot;bind_value&quot;^?&quot;busy_handler&quot;^?&quot;busy_timeout&quot;^?&quot;changes&quot;^?&quot;close&quot;^?&quot;collation_needed&quot;^?&quot;collation_needed16&quot;^?&quot;column_blob&quot;^?&quot;column_bytes&quot;^?&quot;column_bytes16&quot;^?&quot;column_count&quot;^?&quot;column_database_name&quot;^?&quot;column_database_name16&quot;^?&quot;column_decltype&quot;^?&quot;column_decltype16&quot;^?&quot;column_double&quot;^?&quot;column_int&quot;^?&quot;column_int64&quot;^?&quot;column_name&quot;^?&quot;column_name16&quot;^?&quot;column_origin_name&quot;^?&quot;column_origin_name16&quot;^?&quot;column_table_name&quot;^?&quot;column_table_name16&quot;^?&quot;column_text&quot;^?&quot;column_text16&quot;^?&quot;column_type&quot;^?&quot;column_value&quot;^?&quot;commit_hook&quot;^?&quot;complete&quot;^?&quot;complete16&quot;^?&quot;create_collation&quot;^?&quot;create_collation16&quot;^?&quot;create_function&quot;^?&quot;create_function16&quot;^?&quot;create_module&quot;^?&quot;data_count&quot;^?&quot;db_handle&quot;^?&quot;declare_vtab&quot;^?&quot;enable_shared_cache&quot;^?&quot;errcode&quot;^?&quot;errmsg&quot;^?&quot;errmsg16&quot;^?&quot;exec&quot;^?&quot;expired&quot;^?&quot;finalize&quot;^?&quot;free&quot;^?&quot;free_table&quot;^?&quot;get_autocommit&quot;^?&quot;get_auxdata&quot;^?&quot;get_table&quot;^?&quot;global_recover&quot;^?&quot;interruptx&quot;^?&quot;last_insert_rowid&quot;^?&quot;libversion&quot;^?&quot;libversion_number&quot;^?&quot;malloc&quot;^?&quot;mprintf&quot;^?&quot;open&quot;^?&quot;open16&quot;^?&quot;prepare&quot;^?&quot;prepare16&quot;^?&quot;profile&quot;^?&quot;progress_handler&quot;^?&quot;realloc&quot;^?&quot;reset&quot;^?&quot;result_blob&quot;^?&quot;result_double&quot;^?&quot;result_error&quot;^?&quot;result_error16&quot;^?&quot;result_int&quot;^?&quot;result_int64&quot;^?&quot;result_null&quot;^?&quot;result_text&quot;^?&quot;result_text16&quot;^?&quot;result_text16be&quot;^?&quot;result_text16le&quot;^?&quot;result_value&quot;^?&quot;rollback_hook&quot;^?&quot;set_authorizer&quot;^?&quot;set_auxdata&quot;^?&quot;snprintf&quot;^?&quot;step&quot;^?&quot;table_column_metadata&quot;^?&quot;thread_cleanup&quot;^?&quot;total_changes&quot;^?&quot;trace&quot;^?&quot;transfer_bindings&quot;^?&quot;update_hook&quot;^?&quot;user_data&quot;^?&quot;value_blob&quot;^?&quot;value_bytes&quot;^?&quot;value_bytes16&quot;^?&quot;value_double&quot;^?&quot;value_int&quot;^?&quot;value_int64&quot;^?&quot;value_numeric_type&quot;^?&quot;value_text&quot;^?&quot;value_text16&quot;^?&quot;value_text16be&quot;^?&quot;value_text16le&quot;^?&quot;value_type&quot;^?&quot;vmprintf&quot;^?&quot;overload_function&quot;^?&quot;prepare_v2&quot;^?&quot;prepare16_v2&quot;^?&quot;clear_bindings&quot;^?&quot;create_module_v2&quot;^?&quot;bind_zeroblob&quot;^?&quot;blob_bytes&quot;^?&quot;blob_close&quot;^?&quot;blob_open&quot;^?&quot;blob_read&quot;^?&quot;blob_write&quot;^?&quot;create_collation_v2&quot;^?&quot;file_control&quot;^?&quot;memory_highwater&quot;^?&quot;memory_used&quot;^?&quot;mutex_alloc&quot;^?&quot;mutex_enter&quot;^?&quot;mutex_free&quot;^?&quot;mutex_leave&quot;^?&quot;mutex_try&quot;^?&quot;open_v2&quot;^?&quot;release_memory&quot;^?&quot;result_error_nomem&quot;^?&quot;result_error_toobig&quot;^?&quot;sleep&quot;^?&quot;soft_heap_limit&quot;^?&quot;vfs_find&quot;^?&quot;vfs_register&quot;^?&quot;vfs_unregister&quot;^?&quot;xthreadsafe&quot;^?&quot;result_zeroblob&quot;^?&quot;result_error_code&quot;^?&quot;test_control&quot;^?&quot;randomness&quot;^?&quot;context_db_handle&quot;^?&quot;extended_result_codes&quot;^?&quot;limit&quot;^?&quot;next_stmt&quot;^?&quot;sql&quot;^?&quot;status&quot;^?&quot;backup_finish&quot;^?&quot;backup_init&quot;^?&quot;backup_pagecount&quot;^?&quot;backup_remaining&quot;^?&quot;backup_step&quot;^?&quot;compileoption_get&quot;^?&quot;compileoption_used&quot;^?&quot;create_function_v2&quot;^?&quot;db_config&quot;^?&quot;db_mutex&quot;^?&quot;db_status&quot;^?&quot;extended_errcode&quot;^?&quot;log&quot;^?&quot;soft_heap_limit64&quot;^?&quot;sourceid&quot;^?&quot;stmt_status&quot;^?&quot;strnicmp&quot;^?&quot;unlock_notify&quot;^?&quot;wal_autocheckpoint&quot;^?&quot;wal_checkpoint&quot;^?&quot;wal_hook&quot;^?}'>
+<field function_pointer='true' name='aggregate_context' declared_type='void *(*)(sqlite3_context *, int)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='aggregate_count' declared_type='int (*)(sqlite3_context *)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='bind_blob' declared_type='int (*)(sqlite3_stmt *, int, void *, int, void (*)(void *))' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void (*)(void *)' type='^?'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='bind_double' declared_type='int (*)(sqlite3_stmt *, int, double)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='double' type='d'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='bind_int' declared_type='int (*)(sqlite3_stmt *, int, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='bind_int64' declared_type='int (*)(sqlite3_stmt *, int, sqlite_int64)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='sqlite_int64' type='q'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='bind_null' declared_type='int (*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='bind_parameter_count' declared_type='int (*)(sqlite3_stmt *)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='bind_parameter_index' declared_type='int (*)(sqlite3_stmt *, char *)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='bind_parameter_name' const='true' declared_type='char *(*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='char*' type='*'/>
+</field>
+<field function_pointer='true' name='bind_text' declared_type='int (*)(sqlite3_stmt *, int, char *, int, void (*)(void *))' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void (*)(void *)' type='^?'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='bind_text16' declared_type='int (*)(sqlite3_stmt *, int, void *, int, void (*)(void *))' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void (*)(void *)' type='^?'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='bind_value' declared_type='int (*)(sqlite3_stmt *, int, sqlite3_value *)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='busy_handler' declared_type='int (*)(sqlite3 *, int (*)(void *, int), void *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='int (*)(void *, int)' type='^?'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='busy_timeout' declared_type='int (*)(sqlite3 *, int)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='changes' declared_type='int (*)(sqlite3 *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='close' declared_type='int (*)(sqlite3 *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='collation_needed' declared_type='int (*)(sqlite3 *, void *, void (*)(void *, sqlite3 *, int, char *))' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void (*)(void *, sqlite3 *, int, char *)' type='^?'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='collation_needed16' declared_type='int (*)(sqlite3 *, void *, void (*)(void *, sqlite3 *, int, void *))' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void (*)(void *, sqlite3 *, int, void *)' type='^?'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='column_blob' const='true' declared_type='void *(*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='column_bytes' declared_type='int (*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='column_bytes16' declared_type='int (*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='column_count' declared_type='int (*)(sqlite3_stmt *)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='column_database_name' const='true' declared_type='char *(*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='char*' type='*'/>
+</field>
+<field function_pointer='true' name='column_database_name16' const='true' declared_type='void *(*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='column_decltype' const='true' declared_type='char *(*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='char*' type='*'/>
+</field>
+<field function_pointer='true' name='column_decltype16' const='true' declared_type='void *(*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='column_double' declared_type='double (*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='double' type='d'/>
+</field>
+<field function_pointer='true' name='column_int' declared_type='int (*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='column_int64' declared_type='sqlite_int64 (*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='sqlite_int64' type='q'/>
+</field>
+<field function_pointer='true' name='column_name' const='true' declared_type='char *(*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='char*' type='*'/>
+</field>
+<field function_pointer='true' name='column_name16' const='true' declared_type='void *(*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='column_origin_name' const='true' declared_type='char *(*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='char*' type='*'/>
+</field>
+<field function_pointer='true' name='column_origin_name16' const='true' declared_type='void *(*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='column_table_name' const='true' declared_type='char *(*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='char*' type='*'/>
+</field>
+<field function_pointer='true' name='column_table_name16' const='true' declared_type='void *(*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='column_text' const='true' declared_type='unsigned char *(*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='unsigned char*' type='*'/>
+</field>
+<field function_pointer='true' name='column_text16' const='true' declared_type='void *(*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='column_type' declared_type='int (*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='column_value' declared_type='sqlite3_value *(*)(sqlite3_stmt *, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='sqlite3_value*' type='^{Mem=}'/>
+</field>
+<field function_pointer='true' name='commit_hook' declared_type='void *(*)(sqlite3 *, int (*)(void *), void *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='int (*)(void *)' type='^?'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='complete' declared_type='int (*)(char *)' type='^?'>
+<arg const='true' declared_type='char*' type='*'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='complete16' declared_type='int (*)(void *)' type='^?'>
+<arg const='true' declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='create_collation' declared_type='int (*)(sqlite3 *, char *, int, void *, int (*)(void *, int, void *, int, void *))' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int (*)(void *, int, void *, int, void *)' type='^?'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='create_collation16' declared_type='int (*)(sqlite3 *, void *, int, void *, int (*)(void *, int, void *, int, void *))' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int (*)(void *, int, void *, int, void *)' type='^?'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='create_function' declared_type='int (*)(sqlite3 *, char *, int, int, void *, void (*)(sqlite3_context *, int, sqlite3_value **), void (*)(sqlite3_context *, int, sqlite3_value **), void (*)(sqlite3_context *))' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void (*)(sqlite3_context *, int, sqlite3_value **)' type='^?'/>
+<arg declared_type='void (*)(sqlite3_context *, int, sqlite3_value **)' type='^?'/>
+<arg declared_type='void (*)(sqlite3_context *)' type='^?'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='create_function16' declared_type='int (*)(sqlite3 *, void *, int, int, void *, void (*)(sqlite3_context *, int, sqlite3_value **), void (*)(sqlite3_context *, int, sqlite3_value **), void (*)(sqlite3_context *))' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void (*)(sqlite3_context *, int, sqlite3_value **)' type='^?'/>
+<arg declared_type='void (*)(sqlite3_context *, int, sqlite3_value **)' type='^?'/>
+<arg declared_type='void (*)(sqlite3_context *)' type='^?'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='create_module' declared_type='int (*)(sqlite3 *, char *, sqlite3_module *, void *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg const='true' declared_type='sqlite3_module*' type='^{sqlite3_module=i^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='data_count' declared_type='int (*)(sqlite3_stmt *)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='db_handle' declared_type='sqlite3 *(*)(sqlite3_stmt *)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='sqlite3*' type='^{sqlite3=}'/>
+</field>
+<field function_pointer='true' name='declare_vtab' declared_type='int (*)(sqlite3 *, char *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='enable_shared_cache' declared_type='int (*)(int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='errcode' declared_type='int (*)(sqlite3 *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='errmsg' const='true' declared_type='char *(*)(sqlite3 *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval const='true' declared_type='char*' type='*'/>
+</field>
+<field function_pointer='true' name='errmsg16' const='true' declared_type='void *(*)(sqlite3 *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='exec' declared_type='int (*)(sqlite3 *, char *, sqlite3_callback, void *, char **)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='sqlite3_callback' type='^?'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='char**' type='^*'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='expired' declared_type='int (*)(sqlite3_stmt *)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='finalize' declared_type='int (*)(sqlite3_stmt *)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='free' declared_type='void (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='free_table' declared_type='void (*)(char **)' type='^?'>
+<arg declared_type='char**' type='^*'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='get_autocommit' declared_type='int (*)(sqlite3 *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='get_auxdata' declared_type='void *(*)(sqlite3_context *, int)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='get_table' declared_type='int (*)(sqlite3 *, char *, char ***, int *, int *, char **)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='char***' type='^^*'/>
+<arg declared_type='int*' type='^i'/>
+<arg declared_type='int*' type='^i'/>
+<arg declared_type='char**' type='^*'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='global_recover' declared_type='int (*)(void)' type='^?'>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='interruptx' declared_type='void (*)(sqlite3 *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='last_insert_rowid' declared_type='sqlite_int64 (*)(sqlite3 *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='sqlite_int64' type='q'/>
+</field>
+<field function_pointer='true' name='libversion' const='true' declared_type='char *(*)(void)' type='^?'>
+<retval const='true' declared_type='char*' type='*'/>
+</field>
+<field function_pointer='true' name='libversion_number' declared_type='int (*)(void)' type='^?'>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='malloc' declared_type='void *(*)(int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='mprintf' declared_type='char *(*)(char *, ...)' type='^?'>
+<arg const='true' declared_type='char*' type='*'/>
+<retval declared_type='char*' type='*'/>
+</field>
+<field function_pointer='true' name='open' declared_type='int (*)(char *, sqlite3 **)' type='^?'>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='sqlite3**' type='^^{sqlite3}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='open16' declared_type='int (*)(void *, sqlite3 **)' type='^?'>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='sqlite3**' type='^^{sqlite3}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='prepare' declared_type='int (*)(sqlite3 *, char *, int, sqlite3_stmt **, char **)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='sqlite3_stmt**' type='^^{sqlite3_stmt}'/>
+<arg const='true' declared_type='char**' type='^*'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='prepare16' declared_type='int (*)(sqlite3 *, void *, int, sqlite3_stmt **, void **)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='sqlite3_stmt**' type='^^{sqlite3_stmt}'/>
+<arg const='true' declared_type='void**' type='^^v'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='profile' declared_type='void *(*)(sqlite3 *, void (*)(void *, char *, sqlite_uint64), void *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='void (*)(void *, char *, sqlite_uint64)' type='^?'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='progress_handler' declared_type='void (*)(sqlite3 *, int, int (*)(void *), void *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int (*)(void *)' type='^?'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='realloc' declared_type='void *(*)(void *, int)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='reset' declared_type='int (*)(sqlite3_stmt *)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='result_blob' declared_type='void (*)(sqlite3_context *, void *, int, void (*)(void *))' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void (*)(void *)' type='^?'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='result_double' declared_type='void (*)(sqlite3_context *, double)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='result_error' declared_type='void (*)(sqlite3_context *, char *, int)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='result_error16' declared_type='void (*)(sqlite3_context *, void *, int)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='result_int' declared_type='void (*)(sqlite3_context *, int)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='result_int64' declared_type='void (*)(sqlite3_context *, sqlite_int64)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='sqlite_int64' type='q'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='result_null' declared_type='void (*)(sqlite3_context *)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='result_text' declared_type='void (*)(sqlite3_context *, char *, int, void (*)(void *))' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void (*)(void *)' type='^?'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='result_text16' declared_type='void (*)(sqlite3_context *, void *, int, void (*)(void *))' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void (*)(void *)' type='^?'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='result_text16be' declared_type='void (*)(sqlite3_context *, void *, int, void (*)(void *))' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void (*)(void *)' type='^?'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='result_text16le' declared_type='void (*)(sqlite3_context *, void *, int, void (*)(void *))' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void (*)(void *)' type='^?'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='result_value' declared_type='void (*)(sqlite3_context *, sqlite3_value *)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='rollback_hook' declared_type='void *(*)(sqlite3 *, void (*)(void *), void *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='void (*)(void *)' type='^?'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='set_authorizer' declared_type='int (*)(sqlite3 *, int (*)(void *, int, char *, char *, char *, char *), void *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='int (*)(void *, int, char *, char *, char *, char *)' type='^?'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='set_auxdata' declared_type='void (*)(sqlite3_context *, int, void *, void (*)(void *))' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void (*)(void *)' type='^?'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='snprintf' declared_type='char *(*)(int, char *, char *, ...)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='char*' type='*'/>
+<arg const='true' declared_type='char*' type='*'/>
+<retval declared_type='char*' type='*'/>
+</field>
+<field function_pointer='true' name='step' declared_type='int (*)(sqlite3_stmt *)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='table_column_metadata' declared_type='int (*)(sqlite3 *, char *, char *, char *, char **, char **, int *, int *, int *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg const='true' declared_type='char**' type='^*'/>
+<arg const='true' declared_type='char**' type='^*'/>
+<arg declared_type='int*' type='^i'/>
+<arg declared_type='int*' type='^i'/>
+<arg declared_type='int*' type='^i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='thread_cleanup' declared_type='void (*)(void)' type='^?'>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='total_changes' declared_type='int (*)(sqlite3 *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='trace' declared_type='void *(*)(sqlite3 *, void (*)(void *, char *), void *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='void (*)(void *, char *)' type='^?'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='transfer_bindings' declared_type='int (*)(sqlite3_stmt *, sqlite3_stmt *)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='update_hook' declared_type='void *(*)(sqlite3 *, void (*)(void *, int, char *, char *, sqlite_int64), void *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='void (*)(void *, int, char *, char *, sqlite_int64)' type='^?'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='user_data' declared_type='void *(*)(sqlite3_context *)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<retval declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='value_blob' const='true' declared_type='void *(*)(sqlite3_value *)' type='^?'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='value_bytes' declared_type='int (*)(sqlite3_value *)' type='^?'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='value_bytes16' declared_type='int (*)(sqlite3_value *)' type='^?'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='value_double' declared_type='double (*)(sqlite3_value *)' type='^?'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval declared_type='double' type='d'/>
+</field>
+<field function_pointer='true' name='value_int' declared_type='int (*)(sqlite3_value *)' type='^?'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='value_int64' declared_type='sqlite_int64 (*)(sqlite3_value *)' type='^?'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval declared_type='sqlite_int64' type='q'/>
+</field>
+<field function_pointer='true' name='value_numeric_type' declared_type='int (*)(sqlite3_value *)' type='^?'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='value_text' const='true' declared_type='unsigned char *(*)(sqlite3_value *)' type='^?'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval const='true' declared_type='unsigned char*' type='*'/>
+</field>
+<field function_pointer='true' name='value_text16' const='true' declared_type='void *(*)(sqlite3_value *)' type='^?'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='value_text16be' const='true' declared_type='void *(*)(sqlite3_value *)' type='^?'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='value_text16le' const='true' declared_type='void *(*)(sqlite3_value *)' type='^?'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='value_type' declared_type='int (*)(sqlite3_value *)' type='^?'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='vmprintf' declared_type='char *(*)(char *, va_list)' type='^?'>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='va_list' type='*'/>
+<retval declared_type='char*' type='*'/>
+</field>
+<field function_pointer='true' name='overload_function' declared_type='int (*)(sqlite3 *, char *, int)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='prepare_v2' declared_type='int (*)(sqlite3 *, char *, int, sqlite3_stmt **, char **)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='sqlite3_stmt**' type='^^{sqlite3_stmt}'/>
+<arg const='true' declared_type='char**' type='^*'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='prepare16_v2' declared_type='int (*)(sqlite3 *, void *, int, sqlite3_stmt **, void **)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='sqlite3_stmt**' type='^^{sqlite3_stmt}'/>
+<arg const='true' declared_type='void**' type='^^v'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='clear_bindings' declared_type='int (*)(sqlite3_stmt *)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='create_module_v2' declared_type='int (*)(sqlite3 *, char *, sqlite3_module *, void *, void (*)(void *))' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg const='true' declared_type='sqlite3_module*' type='^{sqlite3_module=i^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void (*)(void *)' type='^?'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='bind_zeroblob' declared_type='int (*)(sqlite3_stmt *, int, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='blob_bytes' declared_type='int (*)(sqlite3_blob *)' type='^?'>
+<arg declared_type='sqlite3_blob*' type='^{sqlite3_blob=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='blob_close' declared_type='int (*)(sqlite3_blob *)' type='^?'>
+<arg declared_type='sqlite3_blob*' type='^{sqlite3_blob=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='blob_open' declared_type='int (*)(sqlite3 *, char *, char *, char *, sqlite3_int64, int, sqlite3_blob **)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='sqlite3_int64' type='q'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='sqlite3_blob**' type='^^{sqlite3_blob}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='blob_read' declared_type='int (*)(sqlite3_blob *, void *, int, int)' type='^?'>
+<arg declared_type='sqlite3_blob*' type='^{sqlite3_blob=}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='blob_write' declared_type='int (*)(sqlite3_blob *, void *, int, int)' type='^?'>
+<arg declared_type='sqlite3_blob*' type='^{sqlite3_blob=}'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='create_collation_v2' declared_type='int (*)(sqlite3 *, char *, int, void *, int (*)(void *, int, void *, int, void *), void (*)(void *))' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int (*)(void *, int, void *, int, void *)' type='^?'/>
+<arg declared_type='void (*)(void *)' type='^?'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='file_control' declared_type='int (*)(sqlite3 *, char *, int, void *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='memory_highwater' declared_type='sqlite3_int64 (*)(int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='sqlite3_int64' type='q'/>
+</field>
+<field function_pointer='true' name='memory_used' declared_type='sqlite3_int64 (*)(void)' type='^?'>
+<retval declared_type='sqlite3_int64' type='q'/>
+</field>
+<field function_pointer='true' name='mutex_alloc' declared_type='sqlite3_mutex *(*)(int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+</field>
+<field function_pointer='true' name='mutex_enter' declared_type='void (*)(sqlite3_mutex *)' type='^?'>
+<arg declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='mutex_free' declared_type='void (*)(sqlite3_mutex *)' type='^?'>
+<arg declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='mutex_leave' declared_type='void (*)(sqlite3_mutex *)' type='^?'>
+<arg declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='mutex_try' declared_type='int (*)(sqlite3_mutex *)' type='^?'>
+<arg declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='open_v2' declared_type='int (*)(char *, sqlite3 **, int, char *)' type='^?'>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='sqlite3**' type='^^{sqlite3}'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='char*' type='*'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='release_memory' declared_type='int (*)(int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='result_error_nomem' declared_type='void (*)(sqlite3_context *)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='result_error_toobig' declared_type='void (*)(sqlite3_context *)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='sleep' declared_type='int (*)(int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='soft_heap_limit' declared_type='void (*)(int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='vfs_find' declared_type='sqlite3_vfs *(*)(char *)' type='^?'>
+<arg const='true' declared_type='char*' type='*'/>
+<retval declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+</field>
+<field function_pointer='true' name='vfs_register' declared_type='int (*)(sqlite3_vfs *, int)' type='^?'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='vfs_unregister' declared_type='int (*)(sqlite3_vfs *)' type='^?'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xthreadsafe' declared_type='int (*)(void)' type='^?'>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='result_zeroblob' declared_type='void (*)(sqlite3_context *, int)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='result_error_code' declared_type='void (*)(sqlite3_context *, int)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='test_control' declared_type='int (*)(int, ...)' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='randomness' declared_type='void (*)(int, void *)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='context_db_handle' declared_type='sqlite3 *(*)(sqlite3_context *)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<retval declared_type='sqlite3*' type='^{sqlite3=}'/>
+</field>
+<field function_pointer='true' name='extended_result_codes' declared_type='int (*)(sqlite3 *, int)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='limit' declared_type='int (*)(sqlite3 *, int, int)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='next_stmt' declared_type='sqlite3_stmt *(*)(sqlite3 *, sqlite3_stmt *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+</field>
+<field function_pointer='true' name='sql' const='true' declared_type='char *(*)(sqlite3_stmt *)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval const='true' declared_type='char*' type='*'/>
+</field>
+<field function_pointer='true' name='status' declared_type='int (*)(int, int *, int *, int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int*' type='^i'/>
+<arg declared_type='int*' type='^i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='backup_finish' declared_type='int (*)(sqlite3_backup *)' type='^?'>
+<arg declared_type='sqlite3_backup*' type='^{sqlite3_backup=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='backup_init' declared_type='sqlite3_backup *(*)(sqlite3 *, char *, sqlite3 *, char *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<retval declared_type='sqlite3_backup*' type='^{sqlite3_backup=}'/>
+</field>
+<field function_pointer='true' name='backup_pagecount' declared_type='int (*)(sqlite3_backup *)' type='^?'>
+<arg declared_type='sqlite3_backup*' type='^{sqlite3_backup=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='backup_remaining' declared_type='int (*)(sqlite3_backup *)' type='^?'>
+<arg declared_type='sqlite3_backup*' type='^{sqlite3_backup=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='backup_step' declared_type='int (*)(sqlite3_backup *, int)' type='^?'>
+<arg declared_type='sqlite3_backup*' type='^{sqlite3_backup=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='compileoption_get' const='true' declared_type='char *(*)(int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='char*' type='*'/>
+</field>
+<field function_pointer='true' name='compileoption_used' declared_type='int (*)(char *)' type='^?'>
+<arg const='true' declared_type='char*' type='*'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='create_function_v2' declared_type='int (*)(sqlite3 *, char *, int, int, void *, void (*)(sqlite3_context *, int, sqlite3_value **), void (*)(sqlite3_context *, int, sqlite3_value **), void (*)(sqlite3_context *), void (*)(void *))' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void (*)(sqlite3_context *, int, sqlite3_value **)' type='^?'/>
+<arg declared_type='void (*)(sqlite3_context *, int, sqlite3_value **)' type='^?'/>
+<arg declared_type='void (*)(sqlite3_context *)' type='^?'/>
+<arg declared_type='void (*)(void *)' type='^?'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='db_config' declared_type='int (*)(sqlite3 *, int, ...)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='db_mutex' declared_type='sqlite3_mutex *(*)(sqlite3 *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+</field>
+<field function_pointer='true' name='db_status' declared_type='int (*)(sqlite3 *, int, int *, int *, int)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int*' type='^i'/>
+<arg declared_type='int*' type='^i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='extended_errcode' declared_type='int (*)(sqlite3 *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='log' declared_type='void (*)(int, char *, ...)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='char*' type='*'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='soft_heap_limit64' declared_type='sqlite3_int64 (*)(sqlite3_int64)' type='^?'>
+<arg declared_type='sqlite3_int64' type='q'/>
+<retval declared_type='sqlite3_int64' type='q'/>
+</field>
+<field function_pointer='true' name='sourceid' const='true' declared_type='char *(*)(void)' type='^?'>
+<retval const='true' declared_type='char*' type='*'/>
+</field>
+<field function_pointer='true' name='stmt_status' declared_type='int (*)(sqlite3_stmt *, int, int)' type='^?'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='strnicmp' declared_type='int (*)(char *, char *, int)' type='^?'>
+<arg const='true' declared_type='char*' type='*'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='unlock_notify' declared_type='int (*)(sqlite3 *, void (*)(void **, int), void *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='void (*)(void **, int)' type='^?'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='wal_autocheckpoint' declared_type='int (*)(sqlite3 *, int)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='wal_checkpoint' declared_type='int (*)(sqlite3 *, char *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='wal_hook' declared_type='void *(*)(sqlite3 *, int (*)(void *, sqlite3 *, char *, int), void *)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='int (*)(void *, sqlite3 *, char *, int)' type='^?'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void*' type='^v'/>
+</field>
+</struct>
+<struct name='sqlite3_file' type='{sqlite3_file=&quot;pMethods&quot;^{sqlite3_io_methods}}'>
+<field name='pMethods' const='true' declared_type='struct sqlite3_io_methods*' type='^{sqlite3_io_methods=i^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+</struct>
+<struct name='sqlite3_index_info' type='{sqlite3_index_info=&quot;nConstraint&quot;i&quot;aConstraint&quot;^{sqlite3_index_constraint}&quot;nOrderBy&quot;i&quot;aOrderBy&quot;^{sqlite3_index_orderby}&quot;aConstraintUsage&quot;^{sqlite3_index_constraint_usage}&quot;idxNum&quot;i&quot;idxStr&quot;*&quot;needToFreeIdxStr&quot;i&quot;orderByConsumed&quot;i&quot;estimatedCost&quot;d}'>
+<field name='nConstraint' declared_type='int' type='i'/>
+<field name='aConstraint' declared_type='struct sqlite3_index_constraint*' type='^{sqlite3_index_constraint=iCCi}'/>
+<field name='nOrderBy' declared_type='int' type='i'/>
+<field name='aOrderBy' declared_type='struct sqlite3_index_orderby*' type='^{sqlite3_index_orderby=iC}'/>
+<field name='aConstraintUsage' declared_type='struct sqlite3_index_constraint_usage*' type='^{sqlite3_index_constraint_usage=iC}'/>
+<field name='idxNum' declared_type='int' type='i'/>
+<field name='idxStr' declared_type='char*' type='*'/>
+<field name='needToFreeIdxStr' declared_type='int' type='i'/>
+<field name='orderByConsumed' declared_type='int' type='i'/>
+<field name='estimatedCost' declared_type='double' type='d'/>
+</struct>
+<struct name='sqlite3_io_methods' type='{sqlite3_io_methods=&quot;iVersion&quot;i&quot;xClose&quot;^?&quot;xRead&quot;^?&quot;xWrite&quot;^?&quot;xTruncate&quot;^?&quot;xSync&quot;^?&quot;xFileSize&quot;^?&quot;xLock&quot;^?&quot;xUnlock&quot;^?&quot;xCheckReservedLock&quot;^?&quot;xFileControl&quot;^?&quot;xSectorSize&quot;^?&quot;xDeviceCharacteristics&quot;^?&quot;xShmMap&quot;^?&quot;xShmLock&quot;^?&quot;xShmBarrier&quot;^?&quot;xShmUnmap&quot;^?}'>
+<field name='iVersion' declared_type='int' type='i'/>
+<field function_pointer='true' name='xClose' declared_type='int (*)(sqlite3_file *)' type='^?'>
+<arg declared_type='sqlite3_file*' type='^{sqlite3_file=^{sqlite3_io_methods}}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xRead' declared_type='int (*)(sqlite3_file *, void *, int, sqlite3_int64)' type='^?'>
+<arg declared_type='sqlite3_file*' type='^{sqlite3_file=^{sqlite3_io_methods}}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='sqlite3_int64' type='q'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xWrite' declared_type='int (*)(sqlite3_file *, void *, int, sqlite3_int64)' type='^?'>
+<arg declared_type='sqlite3_file*' type='^{sqlite3_file=^{sqlite3_io_methods}}'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='sqlite3_int64' type='q'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xTruncate' declared_type='int (*)(sqlite3_file *, sqlite3_int64)' type='^?'>
+<arg declared_type='sqlite3_file*' type='^{sqlite3_file=^{sqlite3_io_methods}}'/>
+<arg declared_type='sqlite3_int64' type='q'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xSync' declared_type='int (*)(sqlite3_file *, int)' type='^?'>
+<arg declared_type='sqlite3_file*' type='^{sqlite3_file=^{sqlite3_io_methods}}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xFileSize' declared_type='int (*)(sqlite3_file *, sqlite3_int64 *)' type='^?'>
+<arg declared_type='sqlite3_file*' type='^{sqlite3_file=^{sqlite3_io_methods}}'/>
+<arg declared_type='sqlite3_int64*' type='^q'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xLock' declared_type='int (*)(sqlite3_file *, int)' type='^?'>
+<arg declared_type='sqlite3_file*' type='^{sqlite3_file=^{sqlite3_io_methods}}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xUnlock' declared_type='int (*)(sqlite3_file *, int)' type='^?'>
+<arg declared_type='sqlite3_file*' type='^{sqlite3_file=^{sqlite3_io_methods}}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xCheckReservedLock' declared_type='int (*)(sqlite3_file *, int *)' type='^?'>
+<arg declared_type='sqlite3_file*' type='^{sqlite3_file=^{sqlite3_io_methods}}'/>
+<arg declared_type='int*' type='^i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xFileControl' declared_type='int (*)(sqlite3_file *, int, void *)' type='^?'>
+<arg declared_type='sqlite3_file*' type='^{sqlite3_file=^{sqlite3_io_methods}}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xSectorSize' declared_type='int (*)(sqlite3_file *)' type='^?'>
+<arg declared_type='sqlite3_file*' type='^{sqlite3_file=^{sqlite3_io_methods}}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xDeviceCharacteristics' declared_type='int (*)(sqlite3_file *)' type='^?'>
+<arg declared_type='sqlite3_file*' type='^{sqlite3_file=^{sqlite3_io_methods}}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xShmMap' declared_type='int (*)(sqlite3_file *, int, int, int, void volatile **)' type='^?'>
+<arg declared_type='sqlite3_file*' type='^{sqlite3_file=^{sqlite3_io_methods}}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void volatile**' type='^^v'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xShmLock' declared_type='int (*)(sqlite3_file *, int, int, int)' type='^?'>
+<arg declared_type='sqlite3_file*' type='^{sqlite3_file=^{sqlite3_io_methods}}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xShmBarrier' declared_type='void (*)(sqlite3_file *)' type='^?'>
+<arg declared_type='sqlite3_file*' type='^{sqlite3_file=^{sqlite3_io_methods}}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='xShmUnmap' declared_type='int (*)(sqlite3_file *, int)' type='^?'>
+<arg declared_type='sqlite3_file*' type='^{sqlite3_file=^{sqlite3_io_methods}}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+</struct>
+<struct name='sqlite3_mem_methods' type='{sqlite3_mem_methods=&quot;xMalloc&quot;^?&quot;xFree&quot;^?&quot;xRealloc&quot;^?&quot;xSize&quot;^?&quot;xRoundup&quot;^?&quot;xInit&quot;^?&quot;xShutdown&quot;^?&quot;pAppData&quot;^v}'>
+<field function_pointer='true' name='xMalloc' declared_type='void *(*)(int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='xFree' declared_type='void (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='xRealloc' declared_type='void *(*)(void *, int)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='xSize' declared_type='int (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xRoundup' declared_type='int (*)(int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xInit' declared_type='int (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xShutdown' declared_type='void (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field name='pAppData' declared_type='void*' type='^v'/>
+</struct>
+<struct name='sqlite3_module' type='{sqlite3_module=&quot;iVersion&quot;i&quot;xCreate&quot;^?&quot;xConnect&quot;^?&quot;xBestIndex&quot;^?&quot;xDisconnect&quot;^?&quot;xDestroy&quot;^?&quot;xOpen&quot;^?&quot;xClose&quot;^?&quot;xFilter&quot;^?&quot;xNext&quot;^?&quot;xEof&quot;^?&quot;xColumn&quot;^?&quot;xRowid&quot;^?&quot;xUpdate&quot;^?&quot;xBegin&quot;^?&quot;xSync&quot;^?&quot;xCommit&quot;^?&quot;xRollback&quot;^?&quot;xFindFunction&quot;^?&quot;xRename&quot;^?&quot;xSavepoint&quot;^?&quot;xRelease&quot;^?&quot;xRollbackTo&quot;^?}'>
+<field name='iVersion' declared_type='int' type='i'/>
+<field function_pointer='true' name='xCreate' declared_type='int (*)(sqlite3 *, void *, int, char * *, sqlite3_vtab **, char **)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='char **' type='^*'/>
+<arg declared_type='sqlite3_vtab**' type='^^{sqlite3_vtab}'/>
+<arg declared_type='char**' type='^*'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xConnect' declared_type='int (*)(sqlite3 *, void *, int, char * *, sqlite3_vtab **, char **)' type='^?'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='char **' type='^*'/>
+<arg declared_type='sqlite3_vtab**' type='^^{sqlite3_vtab}'/>
+<arg declared_type='char**' type='^*'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xBestIndex' declared_type='int (*)(sqlite3_vtab *, sqlite3_index_info *)' type='^?'>
+<arg declared_type='sqlite3_vtab*' type='^{sqlite3_vtab=^{sqlite3_module}i*}'/>
+<arg declared_type='sqlite3_index_info*' type='^{sqlite3_index_info=i^{sqlite3_index_constraint}i^{sqlite3_index_orderby}^{sqlite3_index_constraint_usage}i*iid}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xDisconnect' declared_type='int (*)(sqlite3_vtab *)' type='^?'>
+<arg declared_type='sqlite3_vtab*' type='^{sqlite3_vtab=^{sqlite3_module}i*}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xDestroy' declared_type='int (*)(sqlite3_vtab *)' type='^?'>
+<arg declared_type='sqlite3_vtab*' type='^{sqlite3_vtab=^{sqlite3_module}i*}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xOpen' declared_type='int (*)(sqlite3_vtab *, sqlite3_vtab_cursor **)' type='^?'>
+<arg declared_type='sqlite3_vtab*' type='^{sqlite3_vtab=^{sqlite3_module}i*}'/>
+<arg declared_type='sqlite3_vtab_cursor**' type='^^{sqlite3_vtab_cursor}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xClose' declared_type='int (*)(sqlite3_vtab_cursor *)' type='^?'>
+<arg declared_type='sqlite3_vtab_cursor*' type='^{sqlite3_vtab_cursor=^{sqlite3_vtab}}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xFilter' declared_type='int (*)(sqlite3_vtab_cursor *, int, char *, int, sqlite3_value **)' type='^?'>
+<arg declared_type='sqlite3_vtab_cursor*' type='^{sqlite3_vtab_cursor=^{sqlite3_vtab}}'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='sqlite3_value**' type='^^{Mem}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xNext' declared_type='int (*)(sqlite3_vtab_cursor *)' type='^?'>
+<arg declared_type='sqlite3_vtab_cursor*' type='^{sqlite3_vtab_cursor=^{sqlite3_vtab}}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xEof' declared_type='int (*)(sqlite3_vtab_cursor *)' type='^?'>
+<arg declared_type='sqlite3_vtab_cursor*' type='^{sqlite3_vtab_cursor=^{sqlite3_vtab}}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xColumn' declared_type='int (*)(sqlite3_vtab_cursor *, sqlite3_context *, int)' type='^?'>
+<arg declared_type='sqlite3_vtab_cursor*' type='^{sqlite3_vtab_cursor=^{sqlite3_vtab}}'/>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xRowid' declared_type='int (*)(sqlite3_vtab_cursor *, sqlite3_int64 *)' type='^?'>
+<arg declared_type='sqlite3_vtab_cursor*' type='^{sqlite3_vtab_cursor=^{sqlite3_vtab}}'/>
+<arg declared_type='sqlite3_int64*' type='^q'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xUpdate' declared_type='int (*)(sqlite3_vtab *, int, sqlite3_value **, sqlite3_int64 *)' type='^?'>
+<arg declared_type='sqlite3_vtab*' type='^{sqlite3_vtab=^{sqlite3_module}i*}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='sqlite3_value**' type='^^{Mem}'/>
+<arg declared_type='sqlite3_int64*' type='^q'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xBegin' declared_type='int (*)(sqlite3_vtab *)' type='^?'>
+<arg declared_type='sqlite3_vtab*' type='^{sqlite3_vtab=^{sqlite3_module}i*}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xSync' declared_type='int (*)(sqlite3_vtab *)' type='^?'>
+<arg declared_type='sqlite3_vtab*' type='^{sqlite3_vtab=^{sqlite3_module}i*}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xCommit' declared_type='int (*)(sqlite3_vtab *)' type='^?'>
+<arg declared_type='sqlite3_vtab*' type='^{sqlite3_vtab=^{sqlite3_module}i*}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xRollback' declared_type='int (*)(sqlite3_vtab *)' type='^?'>
+<arg declared_type='sqlite3_vtab*' type='^{sqlite3_vtab=^{sqlite3_module}i*}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xFindFunction' declared_type='int (*)(sqlite3_vtab *, int, char *, void (**)(sqlite3_context *, int, sqlite3_value **), void **)' type='^?'>
+<arg declared_type='sqlite3_vtab*' type='^{sqlite3_vtab=^{sqlite3_module}i*}'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='void (**)(sqlite3_context *, int, sqlite3_value **)' type='^^?'/>
+<arg declared_type='void**' type='^^v'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xRename' declared_type='int (*)(sqlite3_vtab *, char *)' type='^?'>
+<arg declared_type='sqlite3_vtab*' type='^{sqlite3_vtab=^{sqlite3_module}i*}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xSavepoint' declared_type='int (*)(sqlite3_vtab *, int)' type='^?'>
+<arg declared_type='sqlite3_vtab*' type='^{sqlite3_vtab=^{sqlite3_module}i*}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xRelease' declared_type='int (*)(sqlite3_vtab *, int)' type='^?'>
+<arg declared_type='sqlite3_vtab*' type='^{sqlite3_vtab=^{sqlite3_module}i*}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xRollbackTo' declared_type='int (*)(sqlite3_vtab *, int)' type='^?'>
+<arg declared_type='sqlite3_vtab*' type='^{sqlite3_vtab=^{sqlite3_module}i*}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+</struct>
+<struct name='sqlite3_mutex_methods' type='{sqlite3_mutex_methods=&quot;xMutexInit&quot;^?&quot;xMutexEnd&quot;^?&quot;xMutexAlloc&quot;^?&quot;xMutexFree&quot;^?&quot;xMutexEnter&quot;^?&quot;xMutexTry&quot;^?&quot;xMutexLeave&quot;^?&quot;xMutexHeld&quot;^?&quot;xMutexNotheld&quot;^?}'>
+<field function_pointer='true' name='xMutexInit' declared_type='int (*)(void)' type='^?'>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xMutexEnd' declared_type='int (*)(void)' type='^?'>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xMutexAlloc' declared_type='sqlite3_mutex *(*)(int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+</field>
+<field function_pointer='true' name='xMutexFree' declared_type='void (*)(sqlite3_mutex *)' type='^?'>
+<arg declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='xMutexEnter' declared_type='void (*)(sqlite3_mutex *)' type='^?'>
+<arg declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='xMutexTry' declared_type='int (*)(sqlite3_mutex *)' type='^?'>
+<arg declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xMutexLeave' declared_type='void (*)(sqlite3_mutex *)' type='^?'>
+<arg declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='xMutexHeld' declared_type='int (*)(sqlite3_mutex *)' type='^?'>
+<arg declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xMutexNotheld' declared_type='int (*)(sqlite3_mutex *)' type='^?'>
+<arg declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+</struct>
+<struct name='sqlite3_pcache_methods' type='{sqlite3_pcache_methods=&quot;pArg&quot;^v&quot;xInit&quot;^?&quot;xShutdown&quot;^?&quot;xCreate&quot;^?&quot;xCachesize&quot;^?&quot;xPagecount&quot;^?&quot;xFetch&quot;^?&quot;xUnpin&quot;^?&quot;xRekey&quot;^?&quot;xTruncate&quot;^?&quot;xDestroy&quot;^?}'>
+<field name='pArg' declared_type='void*' type='^v'/>
+<field function_pointer='true' name='xInit' declared_type='int (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xShutdown' declared_type='void (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='xCreate' declared_type='sqlite3_pcache *(*)(int, int)' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='sqlite3_pcache*' type='^{sqlite3_pcache=}'/>
+</field>
+<field function_pointer='true' name='xCachesize' declared_type='void (*)(sqlite3_pcache *, int)' type='^?'>
+<arg declared_type='sqlite3_pcache*' type='^{sqlite3_pcache=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='xPagecount' declared_type='int (*)(sqlite3_pcache *)' type='^?'>
+<arg declared_type='sqlite3_pcache*' type='^{sqlite3_pcache=}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xFetch' declared_type='void *(*)(sqlite3_pcache *, unsigned int, int)' type='^?'>
+<arg declared_type='sqlite3_pcache*' type='^{sqlite3_pcache=}'/>
+<arg declared_type='unsigned int' type='I'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='xUnpin' declared_type='void (*)(sqlite3_pcache *, void *, int)' type='^?'>
+<arg declared_type='sqlite3_pcache*' type='^{sqlite3_pcache=}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='xRekey' declared_type='void (*)(sqlite3_pcache *, void *, unsigned int, unsigned int)' type='^?'>
+<arg declared_type='sqlite3_pcache*' type='^{sqlite3_pcache=}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='unsigned int' type='I'/>
+<arg declared_type='unsigned int' type='I'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='xTruncate' declared_type='void (*)(sqlite3_pcache *, unsigned int)' type='^?'>
+<arg declared_type='sqlite3_pcache*' type='^{sqlite3_pcache=}'/>
+<arg declared_type='unsigned int' type='I'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='xDestroy' declared_type='void (*)(sqlite3_pcache *)' type='^?'>
+<arg declared_type='sqlite3_pcache*' type='^{sqlite3_pcache=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+</struct>
+<struct name='sqlite3_rtree_geometry' type='{sqlite3_rtree_geometry=&quot;pContext&quot;^v&quot;nParam&quot;i&quot;aParam&quot;^d&quot;pUser&quot;^v&quot;xDelUser&quot;^?}'>
+<field name='pContext' declared_type='void*' type='^v'/>
+<field name='nParam' declared_type='int' type='i'/>
+<field name='aParam' declared_type='double*' type='^d'/>
+<field name='pUser' declared_type='void*' type='^v'/>
+<field function_pointer='true' name='xDelUser' declared_type='void (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</field>
+</struct>
+<struct name='sqlite3_vfs' type='{sqlite3_vfs=&quot;iVersion&quot;i&quot;szOsFile&quot;i&quot;mxPathname&quot;i&quot;pNext&quot;^{sqlite3_vfs}&quot;zName&quot;*&quot;pAppData&quot;^v&quot;xOpen&quot;^?&quot;xDelete&quot;^?&quot;xAccess&quot;^?&quot;xFullPathname&quot;^?&quot;xDlOpen&quot;^?&quot;xDlError&quot;^?&quot;xDlSym&quot;^?&quot;xDlClose&quot;^?&quot;xRandomness&quot;^?&quot;xSleep&quot;^?&quot;xCurrentTime&quot;^?&quot;xGetLastError&quot;^?&quot;xCurrentTimeInt64&quot;^?&quot;xSetSystemCall&quot;^?&quot;xGetSystemCall&quot;^?&quot;xNextSystemCall&quot;^?}'>
+<field name='iVersion' declared_type='int' type='i'/>
+<field name='szOsFile' declared_type='int' type='i'/>
+<field name='mxPathname' declared_type='int' type='i'/>
+<field name='pNext' declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<field name='zName' const='true' declared_type='char*' type='*'/>
+<field name='pAppData' declared_type='void*' type='^v'/>
+<field function_pointer='true' name='xOpen' declared_type='int (*)(sqlite3_vfs *, char *, sqlite3_file *, int, int *)' type='^?'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='sqlite3_file*' type='^{sqlite3_file=^{sqlite3_io_methods}}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int*' type='^i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xDelete' declared_type='int (*)(sqlite3_vfs *, char *, int)' type='^?'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xAccess' declared_type='int (*)(sqlite3_vfs *, char *, int, int *)' type='^?'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int*' type='^i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xFullPathname' declared_type='int (*)(sqlite3_vfs *, char *, int, char *)' type='^?'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='char*' type='*'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xDlOpen' declared_type='void *(*)(sqlite3_vfs *, char *)' type='^?'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<retval declared_type='void*' type='^v'/>
+</field>
+<field function_pointer='true' name='xDlError' declared_type='void (*)(sqlite3_vfs *, int, char *)' type='^?'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='char*' type='*'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='xDlSym' declared_type='void (*(*)(sqlite3_vfs *, void *, char *))(void)' type='^?'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg declared_type='void*' type='^v'/>
+<arg const='true' declared_type='char*' type='*'/>
+<retval function_pointer='true' declared_type='void (*)(void)' type='^?'>
+<retval declared_type='void' type='v'/>
+</retval>
+</field>
+<field function_pointer='true' name='xDlClose' declared_type='void (*)(sqlite3_vfs *, void *)' type='^?'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field function_pointer='true' name='xRandomness' declared_type='int (*)(sqlite3_vfs *, int, char *)' type='^?'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='char*' type='*'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xSleep' declared_type='int (*)(sqlite3_vfs *, int)' type='^?'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xCurrentTime' declared_type='int (*)(sqlite3_vfs *, double *)' type='^?'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg declared_type='double*' type='^d'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xGetLastError' declared_type='int (*)(sqlite3_vfs *, int, char *)' type='^?'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='char*' type='*'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xCurrentTimeInt64' declared_type='int (*)(sqlite3_vfs *, sqlite3_int64 *)' type='^?'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg declared_type='sqlite3_int64*' type='^q'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xSetSystemCall' declared_type='int (*)(sqlite3_vfs *, char *, sqlite3_syscall_ptr)' type='^?'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='sqlite3_syscall_ptr' type='^?'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field function_pointer='true' name='xGetSystemCall' declared_type='sqlite3_syscall_ptr (*)(sqlite3_vfs *, char *)' type='^?'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<retval function_pointer='true' declared_type='sqlite3_syscall_ptr' type='^?'>
+<retval declared_type='void' type='v'/>
+</retval>
+</field>
+<field function_pointer='true' name='xNextSystemCall' const='true' declared_type='char *(*)(sqlite3_vfs *, char *)' type='^?'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<retval const='true' declared_type='char*' type='*'/>
+</field>
+</struct>
+<struct name='sqlite3_vtab' type='{sqlite3_vtab=&quot;pModule&quot;^{sqlite3_module}&quot;nRef&quot;i&quot;zErrMsg&quot;*}'>
+<field name='pModule' const='true' declared_type='sqlite3_module*' type='^{sqlite3_module=i^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<field name='nRef' declared_type='int' type='i'/>
+<field name='zErrMsg' declared_type='char*' type='*'/>
+</struct>
+<struct name='sqlite3_vtab_cursor' type='{sqlite3_vtab_cursor=&quot;pVtab&quot;^{sqlite3_vtab}}'>
+<field name='pVtab' declared_type='sqlite3_vtab*' type='^{sqlite3_vtab=^{sqlite3_module}i*}'/>
+</struct>
+<opaque name='sqlite3' type='^{sqlite3=}'/>
+<opaque name='sqlite3_backup' type='^{sqlite3_backup=}'/>
+<opaque name='sqlite3_blob' type='^{sqlite3_blob=}'/>
+<opaque name='sqlite3_context' type='^{sqlite3_context=}'/>
+<opaque name='sqlite3_mutex' type='^{sqlite3_mutex=}'/>
+<opaque name='sqlite3_pcache' type='^{sqlite3_pcache=}'/>
+<opaque name='sqlite3_stmt' type='^{sqlite3_stmt=}'/>
+<opaque name='sqlite3_value' type='^{Mem=}'/>
+<constant name='sqlite3_temp_directory' declared_type='char*' type='*'/>
+<constant name='sqlite3_version' const='true' declared_type='char*' type='^c'/>
+<string_constant value='2011-06-25 16:35:41 8f8b373eed7052e6e93c1805fc1effcf1db09366' name='SQLITE_SOURCE_ID'/>
+<string_constant value='3.7.7' name='SQLITE_VERSION'/>
+<enum value='3' name='SQLITE3_TEXT'/>
+<enum value='4' name='SQLITE_ABORT'/>
+<enum value='0' name='SQLITE_ACCESS_EXISTS'/>
+<enum value='2' name='SQLITE_ACCESS_READ'/>
+<enum value='1' name='SQLITE_ACCESS_READWRITE'/>
+<enum value='26' name='SQLITE_ALTER_TABLE'/>
+<enum value='28' name='SQLITE_ANALYZE'/>
+<enum value='5' name='SQLITE_ANY'/>
+<enum value='24' name='SQLITE_ATTACH'/>
+<enum value='23' name='SQLITE_AUTH'/>
+<enum value='4' name='SQLITE_BLOB'/>
+<enum value='5' name='SQLITE_BUSY'/>
+<enum value='261' name='SQLITE_BUSY_RECOVERY'/>
+<enum value='14' name='SQLITE_CANTOPEN'/>
+<enum value='270' name='SQLITE_CANTOPEN_NOTEMPDIR'/>
+<enum value='1' name='SQLITE_CHECKPOINT_FULL'/>
+<enum value='0' name='SQLITE_CHECKPOINT_PASSIVE'/>
+<enum value='2' name='SQLITE_CHECKPOINT_RESTART'/>
+<enum value='5' name='SQLITE_CONFIG_GETMALLOC'/>
+<enum value='11' name='SQLITE_CONFIG_GETMUTEX'/>
+<enum value='15' name='SQLITE_CONFIG_GETPCACHE'/>
+<enum value='8' name='SQLITE_CONFIG_HEAP'/>
+<enum value='16' name='SQLITE_CONFIG_LOG'/>
+<enum value='13' name='SQLITE_CONFIG_LOOKASIDE'/>
+<enum value='4' name='SQLITE_CONFIG_MALLOC'/>
+<enum value='9' name='SQLITE_CONFIG_MEMSTATUS'/>
+<enum value='2' name='SQLITE_CONFIG_MULTITHREAD'/>
+<enum value='10' name='SQLITE_CONFIG_MUTEX'/>
+<enum value='7' name='SQLITE_CONFIG_PAGECACHE'/>
+<enum value='14' name='SQLITE_CONFIG_PCACHE'/>
+<enum value='6' name='SQLITE_CONFIG_SCRATCH'/>
+<enum value='3' name='SQLITE_CONFIG_SERIALIZED'/>
+<enum value='1' name='SQLITE_CONFIG_SINGLETHREAD'/>
+<enum value='17' name='SQLITE_CONFIG_URI'/>
+<enum value='19' name='SQLITE_CONSTRAINT'/>
+<enum value='0' name='SQLITE_COPY'/>
+<enum value='11' name='SQLITE_CORRUPT'/>
+<enum value='267' name='SQLITE_CORRUPT_VTAB'/>
+<enum value='1' name='SQLITE_CREATE_INDEX'/>
+<enum value='2' name='SQLITE_CREATE_TABLE'/>
+<enum value='3' name='SQLITE_CREATE_TEMP_INDEX'/>
+<enum value='4' name='SQLITE_CREATE_TEMP_TABLE'/>
+<enum value='5' name='SQLITE_CREATE_TEMP_TRIGGER'/>
+<enum value='6' name='SQLITE_CREATE_TEMP_VIEW'/>
+<enum value='7' name='SQLITE_CREATE_TRIGGER'/>
+<enum value='8' name='SQLITE_CREATE_VIEW'/>
+<enum value='29' name='SQLITE_CREATE_VTABLE'/>
+<enum value='1002' name='SQLITE_DBCONFIG_ENABLE_FKEY'/>
+<enum value='1003' name='SQLITE_DBCONFIG_ENABLE_TRIGGER'/>
+<enum value='1001' name='SQLITE_DBCONFIG_LOOKASIDE'/>
+<enum value='1' name='SQLITE_DBSTATUS_CACHE_USED'/>
+<enum value='4' name='SQLITE_DBSTATUS_LOOKASIDE_HIT'/>
+<enum value='6' name='SQLITE_DBSTATUS_LOOKASIDE_MISS_FULL'/>
+<enum value='5' name='SQLITE_DBSTATUS_LOOKASIDE_MISS_SIZE'/>
+<enum value='0' name='SQLITE_DBSTATUS_LOOKASIDE_USED'/>
+<enum value='6' name='SQLITE_DBSTATUS_MAX'/>
+<enum value='2' name='SQLITE_DBSTATUS_SCHEMA_USED'/>
+<enum value='3' name='SQLITE_DBSTATUS_STMT_USED'/>
+<enum value='9' name='SQLITE_DELETE'/>
+<enum value='1' name='SQLITE_DENY'/>
+<enum value='25' name='SQLITE_DETACH'/>
+<enum value='101' name='SQLITE_DONE'/>
+<enum value='10' name='SQLITE_DROP_INDEX'/>
+<enum value='11' name='SQLITE_DROP_TABLE'/>
+<enum value='12' name='SQLITE_DROP_TEMP_INDEX'/>
+<enum value='13' name='SQLITE_DROP_TEMP_TABLE'/>
+<enum value='14' name='SQLITE_DROP_TEMP_TRIGGER'/>
+<enum value='15' name='SQLITE_DROP_TEMP_VIEW'/>
+<enum value='16' name='SQLITE_DROP_TRIGGER'/>
+<enum value='17' name='SQLITE_DROP_VIEW'/>
+<enum value='30' name='SQLITE_DROP_VTABLE'/>
+<enum value='16' name='SQLITE_EMPTY'/>
+<enum value='1' name='SQLITE_ERROR'/>
+<enum value='3' name='SQLITE_FAIL'/>
+<enum value='6' name='SQLITE_FCNTL_CHUNK_SIZE'/>
+<enum value='7' name='SQLITE_FCNTL_FILE_POINTER'/>
+<enum value='2' name='SQLITE_FCNTL_GET_LOCKPROXYFILE'/>
+<enum value='4' name='SQLITE_FCNTL_LAST_ERRNO'/>
+<enum value='1' name='SQLITE_FCNTL_LOCKSTATE'/>
+<enum value='10' name='SQLITE_FCNTL_PERSIST_WAL'/>
+<enum value='3' name='SQLITE_FCNTL_SET_LOCKPROXYFILE'/>
+<enum value='5' name='SQLITE_FCNTL_SIZE_HINT'/>
+<enum value='8' name='SQLITE_FCNTL_SYNC_OMITTED'/>
+<enum value='2' name='SQLITE_FLOAT'/>
+<enum value='24' name='SQLITE_FORMAT'/>
+<enum value='13' name='SQLITE_FULL'/>
+<enum value='31' name='SQLITE_FUNCTION'/>
+<enum value='2' name='SQLITE_GET_LOCKPROXYFILE'/>
+<enum value='2' name='SQLITE_IGNORE'/>
+<enum value='2' name='SQLITE_INDEX_CONSTRAINT_EQ'/>
+<enum value='32' name='SQLITE_INDEX_CONSTRAINT_GE'/>
+<enum value='4' name='SQLITE_INDEX_CONSTRAINT_GT'/>
+<enum value='8' name='SQLITE_INDEX_CONSTRAINT_LE'/>
+<enum value='16' name='SQLITE_INDEX_CONSTRAINT_LT'/>
+<enum value='64' name='SQLITE_INDEX_CONSTRAINT_MATCH'/>
+<enum value='18' name='SQLITE_INSERT'/>
+<enum value='1' name='SQLITE_INTEGER'/>
+<enum value='2' name='SQLITE_INTERNAL'/>
+<enum value='9' name='SQLITE_INTERRUPT'/>
+<enum value='1' name='SQLITE_IOCAP_ATOMIC'/>
+<enum value='64' name='SQLITE_IOCAP_ATOMIC16K'/>
+<enum value='4' name='SQLITE_IOCAP_ATOMIC1K'/>
+<enum value='8' name='SQLITE_IOCAP_ATOMIC2K'/>
+<enum value='128' name='SQLITE_IOCAP_ATOMIC32K'/>
+<enum value='16' name='SQLITE_IOCAP_ATOMIC4K'/>
+<enum value='2' name='SQLITE_IOCAP_ATOMIC512'/>
+<enum value='256' name='SQLITE_IOCAP_ATOMIC64K'/>
+<enum value='32' name='SQLITE_IOCAP_ATOMIC8K'/>
+<enum value='512' name='SQLITE_IOCAP_SAFE_APPEND'/>
+<enum value='1024' name='SQLITE_IOCAP_SEQUENTIAL'/>
+<enum value='2048' name='SQLITE_IOCAP_UNDELETABLE_WHEN_OPEN'/>
+<enum value='10' name='SQLITE_IOERR'/>
+<enum value='3338' name='SQLITE_IOERR_ACCESS'/>
+<enum value='2826' name='SQLITE_IOERR_BLOCKED'/>
+<enum value='3594' name='SQLITE_IOERR_CHECKRESERVEDLOCK'/>
+<enum value='4106' name='SQLITE_IOERR_CLOSE'/>
+<enum value='2570' name='SQLITE_IOERR_DELETE'/>
+<enum value='4362' name='SQLITE_IOERR_DIR_CLOSE'/>
+<enum value='1290' name='SQLITE_IOERR_DIR_FSYNC'/>
+<enum value='1802' name='SQLITE_IOERR_FSTAT'/>
+<enum value='1034' name='SQLITE_IOERR_FSYNC'/>
+<enum value='3850' name='SQLITE_IOERR_LOCK'/>
+<enum value='3082' name='SQLITE_IOERR_NOMEM'/>
+<enum value='2314' name='SQLITE_IOERR_RDLOCK'/>
+<enum value='266' name='SQLITE_IOERR_READ'/>
+<enum value='5642' name='SQLITE_IOERR_SEEK'/>
+<enum value='5130' name='SQLITE_IOERR_SHMLOCK'/>
+<enum value='5386' name='SQLITE_IOERR_SHMMAP'/>
+<enum value='4618' name='SQLITE_IOERR_SHMOPEN'/>
+<enum value='4874' name='SQLITE_IOERR_SHMSIZE'/>
+<enum value='522' name='SQLITE_IOERR_SHORT_READ'/>
+<enum value='1546' name='SQLITE_IOERR_TRUNCATE'/>
+<enum value='2058' name='SQLITE_IOERR_UNLOCK'/>
+<enum value='778' name='SQLITE_IOERR_WRITE'/>
+<enum value='4' name='SQLITE_LAST_ERRNO'/>
+<enum value='7' name='SQLITE_LIMIT_ATTACHED'/>
+<enum value='2' name='SQLITE_LIMIT_COLUMN'/>
+<enum value='4' name='SQLITE_LIMIT_COMPOUND_SELECT'/>
+<enum value='3' name='SQLITE_LIMIT_EXPR_DEPTH'/>
+<enum value='6' name='SQLITE_LIMIT_FUNCTION_ARG'/>
+<enum value='0' name='SQLITE_LIMIT_LENGTH'/>
+<enum value='8' name='SQLITE_LIMIT_LIKE_PATTERN_LENGTH'/>
+<enum value='1' name='SQLITE_LIMIT_SQL_LENGTH'/>
+<enum value='10' name='SQLITE_LIMIT_TRIGGER_DEPTH'/>
+<enum value='9' name='SQLITE_LIMIT_VARIABLE_NUMBER'/>
+<enum value='5' name='SQLITE_LIMIT_VDBE_OP'/>
+<enum value='6' name='SQLITE_LOCKED'/>
+<enum value='262' name='SQLITE_LOCKED_SHAREDCACHE'/>
+<enum value='4' name='SQLITE_LOCK_EXCLUSIVE'/>
+<enum value='0' name='SQLITE_LOCK_NONE'/>
+<enum value='3' name='SQLITE_LOCK_PENDING'/>
+<enum value='2' name='SQLITE_LOCK_RESERVED'/>
+<enum value='1' name='SQLITE_LOCK_SHARED'/>
+<enum value='20' name='SQLITE_MISMATCH'/>
+<enum value='21' name='SQLITE_MISUSE'/>
+<enum value='0' name='SQLITE_MUTEX_FAST'/>
+<enum value='1' name='SQLITE_MUTEX_RECURSIVE'/>
+<enum value='6' name='SQLITE_MUTEX_STATIC_LRU'/>
+<enum value='7' name='SQLITE_MUTEX_STATIC_LRU2'/>
+<enum value='2' name='SQLITE_MUTEX_STATIC_MASTER'/>
+<enum value='3' name='SQLITE_MUTEX_STATIC_MEM'/>
+<enum value='4' name='SQLITE_MUTEX_STATIC_MEM2'/>
+<enum value='4' name='SQLITE_MUTEX_STATIC_OPEN'/>
+<enum value='7' name='SQLITE_MUTEX_STATIC_PMEM'/>
+<enum value='5' name='SQLITE_MUTEX_STATIC_PRNG'/>
+<enum value='22' name='SQLITE_NOLFS'/>
+<enum value='7' name='SQLITE_NOMEM'/>
+<enum value='26' name='SQLITE_NOTADB'/>
+<enum value='12' name='SQLITE_NOTFOUND'/>
+<enum value='5' name='SQLITE_NULL'/>
+<enum value='0' name='SQLITE_OK'/>
+<enum value='32' name='SQLITE_OPEN_AUTOPROXY'/>
+<enum value='4' name='SQLITE_OPEN_CREATE'/>
+<enum value='8' name='SQLITE_OPEN_DELETEONCLOSE'/>
+<enum value='16' name='SQLITE_OPEN_EXCLUSIVE'/>
+<enum value='1048576' name='SQLITE_OPEN_FILEPROTECTION_COMPLETE'/>
+<enum value='2097152' name='SQLITE_OPEN_FILEPROTECTION_COMPLETEUNLESSOPEN'/>
+<enum value='3145728' name='SQLITE_OPEN_FILEPROTECTION_COMPLETEUNTILFIRSTUSERAUTHENTICATION'/>
+<enum value='7340032' name='SQLITE_OPEN_FILEPROTECTION_MASK'/>
+<enum value='4194304' name='SQLITE_OPEN_FILEPROTECTION_NONE'/>
+<enum value='65536' name='SQLITE_OPEN_FULLMUTEX'/>
+<enum value='256' name='SQLITE_OPEN_MAIN_DB'/>
+<enum value='2048' name='SQLITE_OPEN_MAIN_JOURNAL'/>
+<enum value='16384' name='SQLITE_OPEN_MASTER_JOURNAL'/>
+<enum value='32768' name='SQLITE_OPEN_NOMUTEX'/>
+<enum value='262144' name='SQLITE_OPEN_PRIVATECACHE'/>
+<enum value='1' name='SQLITE_OPEN_READONLY'/>
+<enum value='2' name='SQLITE_OPEN_READWRITE'/>
+<enum value='131072' name='SQLITE_OPEN_SHAREDCACHE'/>
+<enum value='8192' name='SQLITE_OPEN_SUBJOURNAL'/>
+<enum value='512' name='SQLITE_OPEN_TEMP_DB'/>
+<enum value='4096' name='SQLITE_OPEN_TEMP_JOURNAL'/>
+<enum value='1024' name='SQLITE_OPEN_TRANSIENT_DB'/>
+<enum value='64' name='SQLITE_OPEN_URI'/>
+<enum value='524288' name='SQLITE_OPEN_WAL'/>
+<enum value='3' name='SQLITE_PERM'/>
+<enum value='19' name='SQLITE_PRAGMA'/>
+<enum value='15' name='SQLITE_PROTOCOL'/>
+<enum value='25' name='SQLITE_RANGE'/>
+<enum value='20' name='SQLITE_READ'/>
+<enum value='8' name='SQLITE_READONLY'/>
+<enum value='520' name='SQLITE_READONLY_CANTLOCK'/>
+<enum value='264' name='SQLITE_READONLY_RECOVERY'/>
+<enum value='27' name='SQLITE_REINDEX'/>
+<enum value='5' name='SQLITE_REPLACE'/>
+<enum value='1' name='SQLITE_ROLLBACK'/>
+<enum value='100' name='SQLITE_ROW'/>
+<enum value='32' name='SQLITE_SAVEPOINT'/>
+<enum value='17' name='SQLITE_SCHEMA'/>
+<enum value='21' name='SQLITE_SELECT'/>
+<enum value='3' name='SQLITE_SET_LOCKPROXYFILE'/>
+<enum value='8' name='SQLITE_SHM_EXCLUSIVE'/>
+<enum value='2' name='SQLITE_SHM_LOCK'/>
+<enum value='8' name='SQLITE_SHM_NLOCK'/>
+<enum value='4' name='SQLITE_SHM_SHARED'/>
+<enum value='1' name='SQLITE_SHM_UNLOCK'/>
+<enum value='9' name='SQLITE_STATUS_MALLOC_COUNT'/>
+<enum value='5' name='SQLITE_STATUS_MALLOC_SIZE'/>
+<enum value='0' name='SQLITE_STATUS_MEMORY_USED'/>
+<enum value='2' name='SQLITE_STATUS_PAGECACHE_OVERFLOW'/>
+<enum value='7' name='SQLITE_STATUS_PAGECACHE_SIZE'/>
+<enum value='1' name='SQLITE_STATUS_PAGECACHE_USED'/>
+<enum value='6' name='SQLITE_STATUS_PARSER_STACK'/>
+<enum value='4' name='SQLITE_STATUS_SCRATCH_OVERFLOW'/>
+<enum value='8' name='SQLITE_STATUS_SCRATCH_SIZE'/>
+<enum value='3' name='SQLITE_STATUS_SCRATCH_USED'/>
+<enum value='3' name='SQLITE_STMTSTATUS_AUTOINDEX'/>
+<enum value='1' name='SQLITE_STMTSTATUS_FULLSCAN_STEP'/>
+<enum value='2' name='SQLITE_STMTSTATUS_SORT'/>
+<enum value='16' name='SQLITE_SYNC_DATAONLY'/>
+<enum value='3' name='SQLITE_SYNC_FULL'/>
+<enum value='2' name='SQLITE_SYNC_NORMAL'/>
+<enum value='13' name='SQLITE_TESTCTRL_ALWAYS'/>
+<enum value='12' name='SQLITE_TESTCTRL_ASSERT'/>
+<enum value='10' name='SQLITE_TESTCTRL_BENIGN_MALLOC_HOOKS'/>
+<enum value='8' name='SQLITE_TESTCTRL_BITVEC_TEST'/>
+<enum value='9' name='SQLITE_TESTCTRL_FAULT_INSTALL'/>
+<enum value='5' name='SQLITE_TESTCTRL_FIRST'/>
+<enum value='16' name='SQLITE_TESTCTRL_ISKEYWORD'/>
+<enum value='19' name='SQLITE_TESTCTRL_LAST'/>
+<enum value='19' name='SQLITE_TESTCTRL_LOCALTIME_FAULT'/>
+<enum value='15' name='SQLITE_TESTCTRL_OPTIMIZATIONS'/>
+<enum value='11' name='SQLITE_TESTCTRL_PENDING_BYTE'/>
+<enum value='17' name='SQLITE_TESTCTRL_PGHDRSZ'/>
+<enum value='7' name='SQLITE_TESTCTRL_PRNG_RESET'/>
+<enum value='6' name='SQLITE_TESTCTRL_PRNG_RESTORE'/>
+<enum value='5' name='SQLITE_TESTCTRL_PRNG_SAVE'/>
+<enum value='14' name='SQLITE_TESTCTRL_RESERVE'/>
+<enum value='18' name='SQLITE_TESTCTRL_SCRATCHMALLOC'/>
+<enum value='3' name='SQLITE_TEXT'/>
+<enum value='18' name='SQLITE_TOOBIG'/>
+<enum value='22' name='SQLITE_TRANSACTION'/>
+<enum value='23' name='SQLITE_UPDATE'/>
+<enum value='4' name='SQLITE_UTF16'/>
+<enum value='3' name='SQLITE_UTF16BE'/>
+<enum value='2' name='SQLITE_UTF16LE'/>
+<enum value='8' name='SQLITE_UTF16_ALIGNED'/>
+<enum value='1' name='SQLITE_UTF8'/>
+<enum value='3007007' name='SQLITE_VERSION_NUMBER'/>
+<enum value='1' name='SQLITE_VTAB_CONSTRAINT_SUPPORT'/>
+<function name='sqlite3_aggregate_context'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg name='nBytes' declared_type='int' type='i'/>
+<retval declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_aggregate_count'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_auto_extension'>
+<arg function_pointer='true' name='xEntryPoint' declared_type='void (*)(void)' type='^?'>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_backup_finish'>
+<arg name='p' declared_type='sqlite3_backup*' type='^{sqlite3_backup=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_backup_init'>
+<arg name='pDest' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zDestName' const='true' declared_type='char*' type='*'/>
+<arg name='pSource' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zSourceName' const='true' declared_type='char*' type='*'/>
+<retval declared_type='sqlite3_backup*' type='^{sqlite3_backup=}'/>
+</function>
+<function name='sqlite3_backup_pagecount'>
+<arg name='p' declared_type='sqlite3_backup*' type='^{sqlite3_backup=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_backup_remaining'>
+<arg name='p' declared_type='sqlite3_backup*' type='^{sqlite3_backup=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_backup_step'>
+<arg name='p' declared_type='sqlite3_backup*' type='^{sqlite3_backup=}'/>
+<arg name='nPage' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_bind_blob'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg name='n' declared_type='int' type='i'/>
+<arg function_pointer='true' declared_type='void (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_bind_double'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='double' type='d'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_bind_int'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_bind_int64'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='sqlite3_int64' type='q'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_bind_null'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_bind_parameter_count'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_bind_parameter_index'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg name='zName' const='true' declared_type='char*' type='*'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_bind_parameter_name'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='char*' type='*'/>
+</function>
+<function name='sqlite3_bind_text'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg name='n' declared_type='int' type='i'/>
+<arg function_pointer='true' declared_type='void (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_bind_text16'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg function_pointer='true' declared_type='void (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_bind_value'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_bind_zeroblob'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<arg name='n' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_blob_bytes'>
+<arg declared_type='sqlite3_blob*' type='^{sqlite3_blob=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_blob_close'>
+<arg declared_type='sqlite3_blob*' type='^{sqlite3_blob=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_blob_open'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zDb' const='true' declared_type='char*' type='*'/>
+<arg name='zTable' const='true' declared_type='char*' type='*'/>
+<arg name='zColumn' const='true' declared_type='char*' type='*'/>
+<arg name='iRow' declared_type='sqlite3_int64' type='q'/>
+<arg name='flags' declared_type='int' type='i'/>
+<arg name='ppBlob' declared_type='sqlite3_blob**' type='^^{sqlite3_blob}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_blob_read'>
+<arg declared_type='sqlite3_blob*' type='^{sqlite3_blob=}'/>
+<arg name='Z' declared_type='void*' type='^v'/>
+<arg name='N' declared_type='int' type='i'/>
+<arg name='iOffset' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_blob_reopen'>
+<arg declared_type='sqlite3_blob*' type='^{sqlite3_blob=}'/>
+<arg declared_type='sqlite3_int64' type='q'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_blob_write'>
+<arg declared_type='sqlite3_blob*' type='^{sqlite3_blob=}'/>
+<arg name='z' const='true' declared_type='void*' type='^v'/>
+<arg name='n' declared_type='int' type='i'/>
+<arg name='iOffset' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_busy_handler'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg function_pointer='true' declared_type='int (*)(void *, int)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_busy_timeout'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='ms' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_changes'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_clear_bindings'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_close'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_collation_needed'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='void*' type='^v'/>
+<arg function_pointer='true' declared_type='void (*)(void *, sqlite3 *, int, char *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='char*' type='*'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_collation_needed16'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='void*' type='^v'/>
+<arg function_pointer='true' declared_type='void (*)(void *, sqlite3 *, int, void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_column_blob'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg name='iCol' declared_type='int' type='i'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_column_bytes'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg name='iCol' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_column_bytes16'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg name='iCol' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_column_count'>
+<arg name='pStmt' declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_column_database_name'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='char*' type='*'/>
+</function>
+<function name='sqlite3_column_database_name16'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_column_decltype'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='char*' type='*'/>
+</function>
+<function name='sqlite3_column_decltype16'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_column_double'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg name='iCol' declared_type='int' type='i'/>
+<retval declared_type='double' type='d'/>
+</function>
+<function name='sqlite3_column_int'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg name='iCol' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_column_int64'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg name='iCol' declared_type='int' type='i'/>
+<retval declared_type='sqlite3_int64' type='q'/>
+</function>
+<function name='sqlite3_column_name'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg name='N' declared_type='int' type='i'/>
+<retval const='true' declared_type='char*' type='*'/>
+</function>
+<function name='sqlite3_column_name16'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg name='N' declared_type='int' type='i'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_column_origin_name'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='char*' type='*'/>
+</function>
+<function name='sqlite3_column_origin_name16'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_column_table_name'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='char*' type='*'/>
+</function>
+<function name='sqlite3_column_table_name16'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='int' type='i'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_column_text'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg name='iCol' declared_type='int' type='i'/>
+<retval const='true' declared_type='unsigned char*' type='*'/>
+</function>
+<function name='sqlite3_column_text16'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg name='iCol' declared_type='int' type='i'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_column_type'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg name='iCol' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_column_value'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg name='iCol' declared_type='int' type='i'/>
+<retval declared_type='sqlite3_value*' type='^{Mem=}'/>
+</function>
+<function name='sqlite3_commit_hook'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg function_pointer='true' declared_type='int (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_compileoption_get'>
+<arg name='N' declared_type='int' type='i'/>
+<retval const='true' declared_type='char*' type='*'/>
+</function>
+<function name='sqlite3_compileoption_used'>
+<arg name='zOptName' const='true' declared_type='char*' type='*'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_complete'>
+<arg name='sql' const='true' declared_type='char*' type='*'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_complete16'>
+<arg name='sql' const='true' declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_config' variadic='true'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_context_db_handle'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<retval declared_type='sqlite3*' type='^{sqlite3=}'/>
+</function>
+<function name='sqlite3_create_collation'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zName' const='true' declared_type='char*' type='*'/>
+<arg name='eTextRep' declared_type='int' type='i'/>
+<arg name='pArg' declared_type='void*' type='^v'/>
+<arg function_pointer='true' name='xCompare' declared_type='int (*)(void *, int, void *, int, void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</arg>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_create_collation16'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zName' const='true' declared_type='void*' type='^v'/>
+<arg name='eTextRep' declared_type='int' type='i'/>
+<arg name='pArg' declared_type='void*' type='^v'/>
+<arg function_pointer='true' name='xCompare' declared_type='int (*)(void *, int, void *, int, void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</arg>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_create_collation_v2'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zName' const='true' declared_type='char*' type='*'/>
+<arg name='eTextRep' declared_type='int' type='i'/>
+<arg name='pArg' declared_type='void*' type='^v'/>
+<arg function_pointer='true' name='xCompare' declared_type='int (*)(void *, int, void *, int, void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg function_pointer='true' name='xDestroy' declared_type='void (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_create_function'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zFunctionName' const='true' declared_type='char*' type='*'/>
+<arg name='nArg' declared_type='int' type='i'/>
+<arg name='eTextRep' declared_type='int' type='i'/>
+<arg name='pApp' declared_type='void*' type='^v'/>
+<arg function_pointer='true' name='xFunc' declared_type='void (*)(sqlite3_context *, int, sqlite3_value **)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='sqlite3_value**' type='^^{Mem}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg function_pointer='true' name='xStep' declared_type='void (*)(sqlite3_context *, int, sqlite3_value **)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='sqlite3_value**' type='^^{Mem}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg function_pointer='true' name='xFinal' declared_type='void (*)(sqlite3_context *)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_create_function16'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zFunctionName' const='true' declared_type='void*' type='^v'/>
+<arg name='nArg' declared_type='int' type='i'/>
+<arg name='eTextRep' declared_type='int' type='i'/>
+<arg name='pApp' declared_type='void*' type='^v'/>
+<arg function_pointer='true' name='xFunc' declared_type='void (*)(sqlite3_context *, int, sqlite3_value **)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='sqlite3_value**' type='^^{Mem}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg function_pointer='true' name='xStep' declared_type='void (*)(sqlite3_context *, int, sqlite3_value **)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='sqlite3_value**' type='^^{Mem}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg function_pointer='true' name='xFinal' declared_type='void (*)(sqlite3_context *)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_create_function_v2'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zFunctionName' const='true' declared_type='char*' type='*'/>
+<arg name='nArg' declared_type='int' type='i'/>
+<arg name='eTextRep' declared_type='int' type='i'/>
+<arg name='pApp' declared_type='void*' type='^v'/>
+<arg function_pointer='true' name='xFunc' declared_type='void (*)(sqlite3_context *, int, sqlite3_value **)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='sqlite3_value**' type='^^{Mem}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg function_pointer='true' name='xStep' declared_type='void (*)(sqlite3_context *, int, sqlite3_value **)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='sqlite3_value**' type='^^{Mem}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg function_pointer='true' name='xFinal' declared_type='void (*)(sqlite3_context *)' type='^?'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg function_pointer='true' name='xDestroy' declared_type='void (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_create_module'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zName' const='true' declared_type='char*' type='*'/>
+<arg name='p' const='true' declared_type='sqlite3_module*' type='^{sqlite3_module=i^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg name='pClientData' declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_create_module_v2'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zName' const='true' declared_type='char*' type='*'/>
+<arg name='p' const='true' declared_type='sqlite3_module*' type='^{sqlite3_module=i^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg name='pClientData' declared_type='void*' type='^v'/>
+<arg function_pointer='true' name='xDestroy' declared_type='void (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_data_count'>
+<arg name='pStmt' declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_db_config' variadic='true'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='op' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_db_handle'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='sqlite3*' type='^{sqlite3=}'/>
+</function>
+<function name='sqlite3_db_mutex'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+</function>
+<function name='sqlite3_db_status'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='op' declared_type='int' type='i'/>
+<arg name='pCur' declared_type='int*' type='^i'/>
+<arg name='pHiwtr' declared_type='int*' type='^i'/>
+<arg name='resetFlg' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_declare_vtab'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zSQL' const='true' declared_type='char*' type='*'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_enable_load_extension'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='onoff' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_enable_shared_cache'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_errcode'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_errmsg'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval const='true' declared_type='char*' type='*'/>
+</function>
+<function name='sqlite3_errmsg16'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_exec'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='sql' const='true' declared_type='char*' type='*'/>
+<arg function_pointer='true' name='callback' declared_type='int (*)(void *, int, char **, char **)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='char**' type='^*'/>
+<arg declared_type='char**' type='^*'/>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='void*' type='^v'/>
+<arg name='errmsg' declared_type='char**' type='^*'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_expired'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_extended_errcode'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_extended_result_codes'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='onoff' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_file_control'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zDbName' const='true' declared_type='char*' type='*'/>
+<arg name='op' declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_finalize'>
+<arg name='pStmt' declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_free'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_free_table'>
+<arg name='result' declared_type='char**' type='^*'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_get_autocommit'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_get_auxdata'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg name='N' declared_type='int' type='i'/>
+<retval declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_get_table'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zSql' const='true' declared_type='char*' type='*'/>
+<arg name='pazResult' declared_type='char***' type='^^*'/>
+<arg name='pnRow' declared_type='int*' type='^i'/>
+<arg name='pnColumn' declared_type='int*' type='^i'/>
+<arg name='pzErrmsg' declared_type='char**' type='^*'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_global_recover'>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_initialize'>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_interrupt'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_last_insert_rowid'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='sqlite3_int64' type='q'/>
+</function>
+<function name='sqlite3_libversion'>
+<retval const='true' declared_type='char*' type='*'/>
+</function>
+<function name='sqlite3_libversion_number'>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_limit'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='id' declared_type='int' type='i'/>
+<arg name='newVal' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_load_extension'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zFile' const='true' declared_type='char*' type='*'/>
+<arg name='zProc' const='true' declared_type='char*' type='*'/>
+<arg name='pzErrMsg' declared_type='char**' type='^*'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_log' variadic='true'>
+<arg name='iErrCode' declared_type='int' type='i'/>
+<arg name='zFormat' const='true' declared_type='char*' type='*'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_malloc'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_memory_alarm'>
+<arg function_pointer='true' declared_type='void (*)(void *, sqlite3_int64, int)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='sqlite3_int64' type='q'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='sqlite3_int64' type='q'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_memory_highwater'>
+<arg name='resetFlag' declared_type='int' type='i'/>
+<retval declared_type='sqlite3_int64' type='q'/>
+</function>
+<function name='sqlite3_memory_used'>
+<retval declared_type='sqlite3_int64' type='q'/>
+</function>
+<function name='sqlite3_mprintf' variadic='true'>
+<arg const='true' declared_type='char*' type='*'/>
+<retval declared_type='char*' type='*'/>
+</function>
+<function name='sqlite3_mutex_alloc'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+</function>
+<function name='sqlite3_mutex_enter'>
+<arg declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_mutex_free'>
+<arg declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_mutex_held'>
+<arg declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_mutex_leave'>
+<arg declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_mutex_notheld'>
+<arg declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_mutex_try'>
+<arg declared_type='sqlite3_mutex*' type='^{sqlite3_mutex=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_next_stmt'>
+<arg name='pDb' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='pStmt' declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+</function>
+<function name='sqlite3_open'>
+<arg name='filename' const='true' declared_type='char*' type='*'/>
+<arg name='ppDb' declared_type='sqlite3**' type='^^{sqlite3}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_open16'>
+<arg name='filename' const='true' declared_type='void*' type='^v'/>
+<arg name='ppDb' declared_type='sqlite3**' type='^^{sqlite3}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_open_v2'>
+<arg name='filename' const='true' declared_type='char*' type='*'/>
+<arg name='ppDb' declared_type='sqlite3**' type='^^{sqlite3}'/>
+<arg name='flags' declared_type='int' type='i'/>
+<arg name='zVfs' const='true' declared_type='char*' type='*'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_os_end'>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_os_init'>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_overload_function'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zFuncName' const='true' declared_type='char*' type='*'/>
+<arg name='nArg' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_prepare'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zSql' const='true' declared_type='char*' type='*'/>
+<arg name='nByte' declared_type='int' type='i'/>
+<arg name='ppStmt' declared_type='sqlite3_stmt**' type='^^{sqlite3_stmt}'/>
+<arg name='pzTail' const='true' declared_type='char**' type='^*'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_prepare16'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zSql' const='true' declared_type='void*' type='^v'/>
+<arg name='nByte' declared_type='int' type='i'/>
+<arg name='ppStmt' declared_type='sqlite3_stmt**' type='^^{sqlite3_stmt}'/>
+<arg name='pzTail' const='true' declared_type='void**' type='^^v'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_prepare16_v2'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zSql' const='true' declared_type='void*' type='^v'/>
+<arg name='nByte' declared_type='int' type='i'/>
+<arg name='ppStmt' declared_type='sqlite3_stmt**' type='^^{sqlite3_stmt}'/>
+<arg name='pzTail' const='true' declared_type='void**' type='^^v'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_prepare_v2'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zSql' const='true' declared_type='char*' type='*'/>
+<arg name='nByte' declared_type='int' type='i'/>
+<arg name='ppStmt' declared_type='sqlite3_stmt**' type='^^{sqlite3_stmt}'/>
+<arg name='pzTail' const='true' declared_type='char**' type='^*'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_profile'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg function_pointer='true' name='xProfile' declared_type='void (*)(void *, char *, sqlite3_uint64)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='sqlite3_uint64' type='Q'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_progress_handler'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg declared_type='int' type='i'/>
+<arg function_pointer='true' declared_type='int (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_randomness'>
+<arg name='N' declared_type='int' type='i'/>
+<arg name='P' declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_realloc'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_release_memory'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_reset'>
+<arg name='pStmt' declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_reset_auto_extension'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_result_blob'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg function_pointer='true' declared_type='void (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_result_double'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_result_error'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_result_error16'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_result_error_code'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_result_error_nomem'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_result_error_toobig'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_result_int'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_result_int64'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='sqlite3_int64' type='q'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_result_null'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_result_text'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<arg function_pointer='true' declared_type='void (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_result_text16'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg function_pointer='true' declared_type='void (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_result_text16be'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg function_pointer='true' declared_type='void (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_result_text16le'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg function_pointer='true' declared_type='void (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_result_value'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_result_zeroblob'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg name='n' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_rollback_hook'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg function_pointer='true' declared_type='void (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_rtree_geometry_callback'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zGeom' const='true' declared_type='char*' type='*'/>
+<arg function_pointer='true' name='xGeom' declared_type='int (*)(sqlite3_rtree_geometry *, int, double *, int *)' type='^?'>
+<arg declared_type='sqlite3_rtree_geometry*' type='^{sqlite3_rtree_geometry=^vi^d^v^?}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='double*' type='^d'/>
+<arg declared_type='int*' type='^i'/>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg name='pContext' declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_set_authorizer'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg function_pointer='true' name='xAuth' declared_type='int (*)(void *, int, char *, char *, char *, char *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg const='true' declared_type='char*' type='*'/>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg name='pUserData' declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_set_auxdata'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<arg name='N' declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<arg function_pointer='true' declared_type='void (*)(void *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_shutdown'>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_sleep'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_snprintf' variadic='true'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='char*' type='*'/>
+<arg const='true' declared_type='char*' type='*'/>
+<retval declared_type='char*' type='*'/>
+</function>
+<function name='sqlite3_soft_heap_limit'>
+<arg name='N' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_soft_heap_limit64'>
+<arg name='N' declared_type='sqlite3_int64' type='q'/>
+<retval declared_type='sqlite3_int64' type='q'/>
+</function>
+<function name='sqlite3_sourceid'>
+<retval const='true' declared_type='char*' type='*'/>
+</function>
+<function name='sqlite3_sql'>
+<arg name='pStmt' declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval const='true' declared_type='char*' type='*'/>
+</function>
+<function name='sqlite3_status'>
+<arg name='op' declared_type='int' type='i'/>
+<arg name='pCurrent' declared_type='int*' type='^i'/>
+<arg name='pHighwater' declared_type='int*' type='^i'/>
+<arg name='resetFlag' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_step'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_stmt_readonly'>
+<arg name='pStmt' declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_stmt_status'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg name='op' declared_type='int' type='i'/>
+<arg name='resetFlg' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_strnicmp'>
+<arg const='true' declared_type='char*' type='*'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_table_column_metadata'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zDbName' const='true' declared_type='char*' type='*'/>
+<arg name='zTableName' const='true' declared_type='char*' type='*'/>
+<arg name='zColumnName' const='true' declared_type='char*' type='*'/>
+<arg name='pzDataType' const='true' declared_type='char**' type='^*'/>
+<arg name='pzCollSeq' const='true' declared_type='char**' type='^*'/>
+<arg name='pNotNull' declared_type='int*' type='^i'/>
+<arg name='pPrimaryKey' declared_type='int*' type='^i'/>
+<arg name='pAutoinc' declared_type='int*' type='^i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_test_control' variadic='true'>
+<arg name='op' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_thread_cleanup'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sqlite3_threadsafe'>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_total_changes'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_trace'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg function_pointer='true' name='xTrace' declared_type='void (*)(void *, char *)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg const='true' declared_type='char*' type='*'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_transfer_bindings'>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<arg declared_type='sqlite3_stmt*' type='^{sqlite3_stmt=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_unlock_notify'>
+<arg name='pBlocked' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg function_pointer='true' name='xNotify' declared_type='void (*)(void **, int)' type='^?'>
+<arg declared_type='void**' type='^^v'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg name='pNotifyArg' declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_update_hook'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg function_pointer='true' declared_type='void (*)(void *, int, char *, char *, sqlite3_int64)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='sqlite3_int64' type='q'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_uri_parameter'>
+<arg name='zFilename' const='true' declared_type='char*' type='*'/>
+<arg name='zParam' const='true' declared_type='char*' type='*'/>
+<retval const='true' declared_type='char*' type='*'/>
+</function>
+<function name='sqlite3_user_data'>
+<arg declared_type='sqlite3_context*' type='^{sqlite3_context=}'/>
+<retval declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_value_blob'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_value_bytes'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_value_bytes16'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_value_double'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval declared_type='double' type='d'/>
+</function>
+<function name='sqlite3_value_int'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_value_int64'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval declared_type='sqlite3_int64' type='q'/>
+</function>
+<function name='sqlite3_value_numeric_type'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_value_text'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval const='true' declared_type='unsigned char*' type='*'/>
+</function>
+<function name='sqlite3_value_text16'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_value_text16be'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_value_text16le'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</function>
+<function name='sqlite3_value_type'>
+<arg declared_type='sqlite3_value*' type='^{Mem=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_vfs_find'>
+<arg name='zVfsName' const='true' declared_type='char*' type='*'/>
+<retval declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+</function>
+<function name='sqlite3_vfs_register'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<arg name='makeDflt' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_vfs_unregister'>
+<arg declared_type='sqlite3_vfs*' type='^{sqlite3_vfs=iii^{sqlite3_vfs}*^v^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?^?}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_vmprintf'>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='va_list' type='*'/>
+<retval declared_type='char*' type='*'/>
+</function>
+<function name='sqlite3_vsnprintf'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='char*' type='*'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='va_list' type='*'/>
+<retval declared_type='char*' type='*'/>
+</function>
+<function name='sqlite3_vtab_config' variadic='true'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='op' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_vtab_on_conflict'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_wal_autocheckpoint'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='N' declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_wal_checkpoint'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zDb' const='true' declared_type='char*' type='*'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_wal_checkpoint_v2'>
+<arg name='db' declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg name='zDb' const='true' declared_type='char*' type='*'/>
+<arg name='eMode' declared_type='int' type='i'/>
+<arg name='pnLog' declared_type='int*' type='^i'/>
+<arg name='pnCkpt' declared_type='int*' type='^i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='sqlite3_wal_hook'>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg function_pointer='true' declared_type='int (*)(void *, sqlite3 *, char *, int)' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='sqlite3*' type='^{sqlite3=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void*' type='^v'/>
+</function>
+</signatures>

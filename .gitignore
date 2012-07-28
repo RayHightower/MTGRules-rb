@@ -3,5 +3,6 @@ build
 resources/*.nib
 resources/*.momd
 resources/*.storyboardc
-
+vendor/Pods
+vendor/Podfile.lock
 .DS_Store
