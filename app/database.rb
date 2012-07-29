@@ -1,11 +1,11 @@
 class Database
-  
+
 
   def self.open(db_name)
     Database.new(db_name)
   end
 
-  
+
   def initialize(db_name)
     @database = nil
     path = NSBundle.mainBundle.resourcePath.stringByAppendingPathComponent(db_name)
@@ -14,7 +14,7 @@ class Database
       @database = nil
     end
   end
-  
+
   def open?
     !@database.nil?
   end
@@ -37,8 +37,8 @@ class Database
       entry << ContentsEntry.new(section, subsection, subsubsection, text)
     end
   end
-  
-  
+
+
   def load_sub_contents_for(entry)
     results = @database.executeQuery('select section, subsection, text from contents where section = :section and subsection > 0 and subsubsection = 0 order by subsection', withParameterDictionary: {:section => entry.section})
     return if results.nil?
@@ -48,13 +48,13 @@ class Database
       text = results.stringForColumnIndex(2)
       entry << ContentsEntry.new(section, subsection, 0, text)
     end
-    
+
     entry.children.each do |sub_entry|
       load_subsub_contents_for(sub_entry)
     end
   end
-  
-  
+
+
   def load_contents
     top_level_contents = ContentsEntry.new(0, 0, 0, 'Rules')
     return top_level_contents unless open?
@@ -65,15 +65,15 @@ class Database
       text = results.stringForColumnIndex(1)
       top_level_contents << ContentsEntry.new(section, 0, 0, text)
     end
-    
+
     top_level_contents.children.each do |entry|
       load_sub_contents_for(entry)
     end
-    
+
     top_level_contents
   end
-  
-  
+
+
   def get_extra_info(key)
     return '' unless open?
     results = @database.executeQuery('select body from extras where name = :name', withParameterDictionary: {:name => key})
@@ -82,8 +82,8 @@ class Database
 
     ''
   end
-  
-  
+
+
   def get_glossary
     glossary = {}
     return glossary unless open?
@@ -96,8 +96,8 @@ class Database
     end
     glossary
   end
-  
-  
+
+
   def get_glossary_definition_for_term(term)
     return GlossaryEntry.empty_entry unless open?
     results = @database.executeQuery('select definition from glossary where term = :term', withParameterDictionary: {:term => term})
@@ -106,7 +106,7 @@ class Database
     GlossaryEntry.empty_entry
   end
 
-  
+
   def get_rules_for_subsection(subsection)
     rules  = []
     return rules unless open?
@@ -119,8 +119,8 @@ class Database
     end
     rules
   end
-  
-  
+
+
   def get_rule_for_subsection(subsection, and_subsubsection: subsubsection)
     return nil unless open?
     clause = nil
@@ -130,7 +130,7 @@ class Database
     end
     clause
   end
-  
+
 
   def get_rules_for_subsection(subsection, and_subsubsection: subsubsection_root)
     rules = []
@@ -198,5 +198,5 @@ class Database
     items
   end
 
-  
+
 end

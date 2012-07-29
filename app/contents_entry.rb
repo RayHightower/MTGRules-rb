@@ -24,5 +24,10 @@ class ContentsEntry
   def [](index)
     @children[index]
   end
-  
+
+
+  def has_children?
+    !@children.empty?
+  end
+
 end
