@@ -6,3 +6,5 @@ resources/*.storyboardc
 vendor/Pods
 vendor/Podfile.lock
 .DS_Store
+#*
+.#*
