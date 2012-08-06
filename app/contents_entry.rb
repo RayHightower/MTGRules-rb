@@ -1,24 +1,25 @@
 class ContentsEntry
 
-	attr_accessor :section, :subsection, :subsubsection, :text, :children
+  attr_accessor :section, :subsection, :subsubsection, :text, :children
+  
 
-
-	def initialize(the_section, the_subsection, the_subsubsection, the_text)
-		@section = the_section
-		@subsection = the_subsection
-		@subsubsection = the_subsubsection
-		@text = the_text
+  def initialize(the_section, the_subsection, the_subsubsection, the_text)
+    @section = the_section
+    @subsection = the_subsection
+    @subsubsection = the_subsubsection
+    @text = the_text
     @children = []
-	end
-
-
+  end
+  
+  
   def <<(child)
     @children << child
   end
 
-	def size
-		@children.size
-	end
+  
+  def size
+    @children.size
+  end
 
 
   def [](index)

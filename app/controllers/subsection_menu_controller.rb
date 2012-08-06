@@ -39,7 +39,7 @@ class SubsectionMenuController < UITableViewController
     rule_view_controller.rules = rules
     rule_view_controller.delegate = delegate
     rule_view_controller.title = entry.text
-    self.navigationController().pushViewController(rule_view_controller, animated: true)
+    navigationController().pushViewController(rule_view_controller, animated: true)
   end
 
 
@@ -49,7 +49,7 @@ class SubsectionMenuController < UITableViewController
       subsubsection_menu_controller = SubSubSectionMenuController.alloc.initWithStyle(UITableViewStylePlain)
       subsubsection_menu_controller.contents = child
       subsubsection_menu_controller.delegate = delegate
-      self.navigationController().pushViewController(subsubsection_menu_controller, animated: true)
+      navigationController().pushViewController(subsubsection_menu_controller, animated: true)
     else
       show_rules_for(child)
     end

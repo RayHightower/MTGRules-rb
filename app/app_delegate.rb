@@ -17,7 +17,7 @@ class AppDelegate
     @database = Database.new("rules.dat")
     @top_level_contents = @database.load_contents
 
-    @root_view_controller = RootViewController.alloc.initWithStyle(UITableViewStylePlain)
+    @root_view_controller = RootViewController.alloc.initWithNibName("RootView", bundle: nil)
     @root_view_controller.delegate = self
     @root_view_controller.contents = top_level_contents
 

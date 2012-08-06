@@ -85,14 +85,14 @@ class Database
 
 
   def get_glossary
-    glossary = {}
+    glossary = []
     return glossary unless open?
     results = @database.executeQuery('select term, definition from glossary')
     return glossary if results.nil?
     while results.next
       term = results.stringForColumnIndex(0)
       definition = results.stringForColumnIndex(1)
-      glossary[term] = GlossaryEntry.new(term, definition)
+      glossary << GlossaryEntry.new(term, definition)
     end
     glossary
   end
@@ -164,7 +164,7 @@ class Database
   def get_rules_referenced_by_rule(clause)
     rules = []
     return rules unless open?
-    results =  @database.executeQuery('select subsection, subsubsection, body from rulerefs indexed by rulerefsbyrule where rule = :rule order by subsection, subsubsection', withParameterDictionary: {:rule => clause})
+    results =  @database.executeQuery('select subsection, subsubsection, body from rulerefs indexed by rulerefsbyrule where rule = :rule order by subsection, subsubsection', withParameterDictionary: {:rule => clause.name})
     return rules if results.nil?
     while results.next
       subsection = results.intForColumnIndex(0)
