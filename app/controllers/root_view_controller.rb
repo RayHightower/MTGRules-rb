@@ -58,11 +58,11 @@ class RootViewController < UITableViewController
       navigationController().pushViewController(subsection_menu_controller, animated: true)
     elsif index_path.row == 0
       show_extra_info("Intro")
-    elsif index_path.row == contents.children.size - 3
+    elsif index_path.row == contents.size - 3
       show_glossary
-    elsif index_path.row == contents.children.size - 2
+    elsif index_path.row == contents.size - 2
       show_extra_info("Credits")
-    elsif index_path.row == contents.children.size - 1
+    elsif index_path.row == contents.size - 1
       show_extra_info("Customer Service Information")
     end
   end

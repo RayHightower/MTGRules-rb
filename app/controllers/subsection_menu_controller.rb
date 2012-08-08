@@ -1,11 +1,10 @@
 class SubsectionMenuController < UITableViewController
-  extend IB
 
   attr_accessor :delegate, :contents
 
 
   def viewDidLoad
-    super.viewDidLoad
+    view.dataSource = view.delegate = self
     self.title = contents.text
   end
 
@@ -54,13 +53,6 @@ class SubsectionMenuController < UITableViewController
       show_rules_for(child)
     end
   end
-
-
-  def didReceiveMemoryWarning
-    super.didReceiveMemoryWarning
-  end
-
-
 
 
 end

@@ -9,7 +9,7 @@ Motion::Project::App.setup do |app|
   app.name = 'MTGRules-rb'
   app.device_family = :iphone
   app.interface_orientations = [:portrait]
-  app.files_dependencies 'app/database.rb' => 'app/sqlite.rb'
+  app.info_plist['NSMainNibFile'] = 'MainWindow'
   app.pods do
     dependency 'FMDB'
   end
