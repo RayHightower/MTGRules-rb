@@ -52,7 +52,7 @@ class RootViewController < UITableViewController
   def tableView(table_view, didSelectRowAtIndexPath: index_path)
     child = contents.children[index_path.row]
     if child.has_children?
-      subsection_menu_controller = SubsectionMenuController.alloc.initWithStyle(UITableViewStylePlain)
+      subsection_menu_controller = SubSectionMenuController.alloc.initWithStyle(UITableViewStylePlain)
       subsection_menu_controller.contents = child
       subsection_menu_controller.delegate = delegate
       navigationController().pushViewController(subsection_menu_controller, animated: true)
