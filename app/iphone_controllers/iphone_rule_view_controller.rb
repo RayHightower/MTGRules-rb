@@ -1,15 +1,15 @@
-class RuleViewController < UITableViewController
+class IphoneRuleViewController < UITableViewController
   extend IB
 
   RULE_CELL_IDENTIFIER = "RuleCell"
-  
+
   attr_accessor :delegate
   attr_accessor :tableCell
   attr_accessor :rules
 
   ib_outlet :tableCell, UITableViewCell
 
-  
+
   def numberOfSectionsInTableView(table_view)
     1
   end
@@ -41,14 +41,14 @@ class RuleViewController < UITableViewController
       cell = tableCell
       tableCell = nil
     end
-    
+
     header_label = cell.viewWithTag(1)
     body_label = cell.viewWithTag(2)
-  
+
     clause = rules[index_path.row]
     header_label.text = "#{clause.subsection}.#{clause.subsubsection}"
     body_label.text = clause.body
-  
+
     body_label.lineBreakMode = UILineBreakModeWordWrap
     body_label.numberOfLines = 0
     body_label.font = UIFont.fontWithName("Helvetica", size: 14.0)
@@ -62,10 +62,10 @@ class RuleViewController < UITableViewController
   def tableView(table_view, didSelectRowAtIndexPath: index_path)
     self.view.deselectRowAtIndexPath(index_path, animated: false)
     clause = rules[index_path.row]
-    referenced_rules = delegate.get_rules_referenced_by_rule(clause)
-  
+    referenced_rules = delegate.database.get_rules_referenced_by_rule(clause)
+
     if referenced_rules.count > 0
-      rule_view_controller = RuleViewController.alloc.initWithNibName("RuleViewController", bundle: nil)
+      rule_view_controller = IphoneRuleViewController.alloc.initWithNibName("IphoneRuleViewController", bundle: nil)
       rule_view_controller.rules = referenced_rules
       rule_view_controller.delegate = delegate
       rule_view_controller.title = "Rules"

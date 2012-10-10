@@ -1,7 +1,7 @@
-class ExtrasViewController < UIViewController
+class IphoneExtrasViewController < UIViewController
 
   attr_accessor :delegate
-  
+
 
   def viewDidLoad
     super

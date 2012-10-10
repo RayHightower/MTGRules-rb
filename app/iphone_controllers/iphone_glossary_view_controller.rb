@@ -1,14 +1,14 @@
-class GlossaryViewController < UITableViewController
+class IphoneGlossaryViewController < UITableViewController
   extend IB
 
   GLOSSARY_CELL_IDENTIFIER = "GlossaryCell"
-  
+
   attr_accessor :delegate
   attr_accessor :tableCell
   attr_accessor :glossary
 
   ib_outlet :tableCell, UITableViewCell
-  
+
 
   def viewDidLoad
     super
@@ -19,14 +19,14 @@ class GlossaryViewController < UITableViewController
   def glossary=(new_glossary)
     if @glossary != new_glossary
       @glossary = new_glossary
-    
+
       @glossary_entries = []
       the_collation = UILocalizedIndexedCollation.currentCollation
       @glossary.each do |item|
         sect = the_collation.sectionForObject(item, collationStringSelector: :name)
         item.section_number = sect
       end
-    
+
       high_section = the_collation.sectionTitles.count
       section_arrays = []
       (0..high_section).each do |i|
@@ -61,7 +61,7 @@ class GlossaryViewController < UITableViewController
       nil
     end
   end
-    
+
 
   def tableView(table_view, sectionForSectionIndexTitle: title, atIndex: index)
     UILocalizedIndexedCollation.currentCollation.sectionForSectionIndexTitleAtIndex(index)
@@ -91,22 +91,22 @@ class GlossaryViewController < UITableViewController
   end
 
 
-  def tableView(table_view, cellForRowAtIndexPath: index_path) 
-    
+  def tableView(table_view, cellForRowAtIndexPath: index_path)
+
     cell = table_view.dequeueReusableCellWithIdentifier(GLOSSARY_CELL_IDENTIFIER)
     if cell.nil?
       NSBundle.mainBundle.loadNibNamed(GLOSSARY_CELL_IDENTIFIER, owner: self, options: nil)
       cell = @tableCell
       @tableCell = nil;
     end
-    
+
     headerLabel = cell.viewWithTag(1)
     bodyLabel = cell.viewWithTag(2)
-    
+
     entry = entry_at_index_path(index_path)
     headerLabel.text = entry.name
     bodyLabel.text = entry.body
-    
+
     bodyLabel.lineBreakMode = UILineBreakModeWordWrap
     bodyLabel.numberOfLines = 0
     bodyLabel.font = UIFont.fontWithName("Helvetica", size: 14.0)
@@ -126,8 +126,8 @@ class GlossaryViewController < UITableViewController
   def tableView(table_view, didSelectRowAtIndexPath:index_path)
     self.view.deselectRowAtIndexPath(index_path, animated: false)
     entry = entry_at_index_path(index_path)
-    referenced_rules = delegate.get_rules_referenced_by_glossary_term(entry.name)
-    
+    referenced_rules = delegate.database.get_rules_referenced_by_glossary_term(entry.name)
+
     if referenced_rules.count > 0
       ruleViewController = RuleViewController.alloc.initWithNibName("RuleView", bundle: nil)
       ruleViewController.rules = referenced_rules
