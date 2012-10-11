@@ -1,5 +1,5 @@
 source "https://rubygems.org"
 gem "ib"
-#gem "bubble-wrap"
+gem "bubble-wrap"
 gem "motion-cocoapods"
 gem "rake"

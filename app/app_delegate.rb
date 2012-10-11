@@ -6,7 +6,9 @@ class AppDelegate < NSObject
 
   outlet :window, UIWindow
   outlet :navigationController, UINavigationController
-  outlet :rootViewController, IphoneRootViewController
+  outlet :splitViewController, UISplitViewController
+#  outlet :detailViewController, IpadDetailViewController
+  outlet :rootViewController, RootViewController
 
 
   def application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -16,10 +18,7 @@ class AppDelegate < NSObject
 
     rootViewController.delegate = self
     rootViewController.contents = @top_level_contents
-    window.addSubview(navigationController.view)
-
-    # window.addSubview(splitViewController.view)
-
+    window.addSubview(Device.ipad? ? splitViewController.view : navigationController.view)
     window.makeKeyAndVisible
     true
   end

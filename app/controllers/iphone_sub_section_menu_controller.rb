@@ -1,5 +1,6 @@
 class IphoneSubSectionMenuController < UITableViewController
 
+
   attr_accessor :delegate, :contents
 
 
