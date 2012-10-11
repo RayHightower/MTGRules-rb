@@ -1,6 +1,7 @@
 .repl_history
 .datf*
 build
+ui.xcodeproj
 resources/*.nib
 resources/*.momd
 resources/*.storyboardc
