@@ -1,7 +1,7 @@
 class IphoneGlossaryViewController < UITableViewController
   extend IB
 
-  GLOSSARY_CELL_IDENTIFIER = "GlossaryCell"
+  GLOSSARY_CELL_IDENTIFIER = "IphoneGlossaryCell"
 
   attr_accessor :delegate
   attr_accessor :tableCell

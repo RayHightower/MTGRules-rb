@@ -10,9 +10,10 @@ Motion::Project::App.setup do |app|
     app.device_family = [:iphone, :ipad]
   app.deployment_target = "4.3"
   app.interface_orientations = [:portrait]
-  app.info_plist['NSMainNibFile'] = 'IPhoneMainWindow'
+  app.info_plist['NSMainNibFile'] = 'IphoneMainWindow'
+  app.files_dependencies 'app/app_delegate.rb' => 'app/controllers/iphone_root_view_controller.rb'
 
   app.pods do
-    dependency 'FMDB'
+    pod 'FMDB'
   end
 end

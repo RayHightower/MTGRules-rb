@@ -1,17 +1,12 @@
-class AppDelegate
+class AppDelegate < NSObject
   extend IB
 
   attr_accessor :top_level_contents
-
-  attr_accessor :window
-  attr_accessor :navigationController
-  attr_accessor :rootViewController
-
   attr_reader :database
 
-  ib_outlet :window, UIWindow
-  ib_outlet :navigationController, UINavigationController
-  ib_outlet :rootViewController, IphoneRootViewController
+  outlet :window, UIWindow
+  outlet :navigationController, UINavigationController
+  outlet :rootViewController, IphoneRootViewController
 
 
   def application(application, didFinishLaunchingWithOptions: launchOptions)

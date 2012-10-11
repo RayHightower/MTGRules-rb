@@ -69,7 +69,7 @@ class IphoneRootViewController < UITableViewController
 
 
   def search(sender)
-    search_controller = IphoneSearchController.alloc.initWithNibName("IphoneSearchController", bundle: nil)
+    search_controller = IphoneSearchController.alloc.initWithNibName("IphoneSearchView", bundle: nil)
     search_controller.delegate = delegate
     navigationController().pushViewController(search_controller, animated: true)
   end

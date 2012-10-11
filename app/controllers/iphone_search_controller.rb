@@ -1,16 +1,16 @@
 class IphoneSearchController < UIViewController
   extend IB
 
-  attr_accessor :delegate, :searchBar, :resultsView, :searchDisplayController, :tableCell
+  attr_accessor :delegate, :searchBar, :resultsView, :displayController, :tableCell
 
 
   ## ib outlets
   ib_outlet :searchBar, UISearchBar
   ib_outlet :resultsView, UITableView
-  ib_outlet :searchDisplayController, UISearchDisplayController
+  ib_outlet :displayController, UISearchDisplayController
   ib_outlet :tableCell, UITableViewCell
 
-  CELL_IDENTIFIER = "RuleCell"
+  CELL_IDENTIFIER = "IphoneRuleCell"
 
   def searchBarTextDidEndEditing(search_bar)
     search_bar.resignFirstResponder
@@ -34,8 +34,8 @@ class IphoneSearchController < UIViewController
   def show_references_for(fragment)
     @results = delegate.database.search_for(fragment)
     if @results.size > 0
-      searchDisplayController.searchResultsTableView.reloadData
-      searchDisplayController.searchResultsTableView.scrollToRowAtIndexPath(NSIndexPath.indexPathForRow(0, inSection: 0), atScrollPosition: UITableViewScrollPositionTop, animated: false)
+      displayController.searchResultsTableView.reloadData
+      displayController.searchResultsTableView.scrollToRowAtIndexPath(NSIndexPath.indexPathForRow(0, inSection: 0), atScrollPosition: UITableViewScrollPositionTop, animated: false)
     end
   end
 
