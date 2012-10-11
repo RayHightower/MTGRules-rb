@@ -1,13 +1,13 @@
 class IphoneRuleViewController < UITableViewController
   extend IB
 
-  RULE_CELL_IDENTIFIER = "RuleCell"
+  RULE_CELL_IDENTIFIER = "IphoneRuleCell"
 
   attr_accessor :delegate
   attr_accessor :tableCell
   attr_accessor :rules
 
-  ib_outlet :tableCell, UITableViewCell
+  outlet :tableCell, UITableViewCell
 
 
   def numberOfSectionsInTableView(table_view)
@@ -65,7 +65,7 @@ class IphoneRuleViewController < UITableViewController
     referenced_rules = delegate.database.get_rules_referenced_by_rule(clause)
 
     if referenced_rules.count > 0
-      rule_view_controller = IphoneRuleViewController.alloc.initWithNibName("IphoneRuleViewController", bundle: nil)
+      rule_view_controller = IphoneRuleViewController.alloc.initWithNibName("IphoneRuleView", bundle: nil)
       rule_view_controller.rules = referenced_rules
       rule_view_controller.delegate = delegate
       rule_view_controller.title = "Rules"

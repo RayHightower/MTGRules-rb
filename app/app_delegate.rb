@@ -14,13 +14,13 @@ class AppDelegate < NSObject
     @database = Database.new("rules.dat")
     @top_level_contents = @database.load_contents
 
-    @rootViewController.delegate = self
-    @rootViewController.contents = top_level_contents
-    @window.addSubview(@navigationController.view)
+    rootViewController.delegate = self
+    rootViewController.contents = @top_level_contents
+    window.addSubview(navigationController.view)
 
-    # @window.addSubview(splitViewController.view)
+    # window.addSubview(splitViewController.view)
 
-    @window.makeKeyAndVisible
+    window.makeKeyAndVisible
     true
   end
 

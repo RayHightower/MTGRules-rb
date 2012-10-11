@@ -135,7 +135,8 @@ class Database
   def get_rules_for_subsection(subsection, and_subsubsection: subsubsection_root)
     rules = []
     return rules unless open?
-    results =  @database.executeQuery('select subsubsection, body from rules where subsection = :subsection and subsubsection like :subsubsection order by subsubsection', withParameterDictionary: {:subsection => subsection, :subsubsection => "#{subsubsection_root}%"})
+    subsubsection_string = subsubsection_root < 10 ? "0#{subsubsection_root}%" : "#{subsubsection_root}%"
+    results =  @database.executeQuery('select subsubsection, body from rules where subsection = :subsection and subsubsection like :subsubsection order by subsubsection', withParameterDictionary: {:subsection => subsection, :subsubsection => subsubsection_string})
     return rules if results.nil?
     while results.next
       subsubsection = results.stringForColumnIndex(0)

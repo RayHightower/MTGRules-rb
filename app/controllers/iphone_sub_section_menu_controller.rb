@@ -34,7 +34,7 @@ class IphoneSubSectionMenuController < UITableViewController
 
   def show_rules_for(entry)
     rules = delegate.database.get_rules_for_subsection(entry.subsection)
-    rule_view_controller = IphoneRuleViewController.alloc.initWithNibName("IphoneRuleViewController", bundle: nil)
+    rule_view_controller = IphoneRuleViewController.alloc.initWithNibName("IphoneRuleView", bundle: nil)
     rule_view_controller.rules = rules
     rule_view_controller.delegate = delegate
     rule_view_controller.title = entry.text

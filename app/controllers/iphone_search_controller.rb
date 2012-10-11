@@ -1,14 +1,14 @@
 class IphoneSearchController < UIViewController
   extend IB
 
-  attr_accessor :delegate, :searchBar, :resultsView, :displayController, :tableCell
+  attr_accessor :delegate
 
 
   ## ib outlets
-  ib_outlet :searchBar, UISearchBar
-  ib_outlet :resultsView, UITableView
-  ib_outlet :displayController, UISearchDisplayController
-  ib_outlet :tableCell, UITableViewCell
+  outlet :searchBar, UISearchBar
+  outlet :resultsView, UITableView
+  outlet :displayController, UISearchDisplayController
+  outlet :tableCell, UITableViewCell
 
   CELL_IDENTIFIER = "IphoneRuleCell"
 
@@ -107,7 +107,7 @@ class IphoneSearchController < UIViewController
                          delegate.database.get_rules_referenced_by_rule(detail)
                        end
     if referenced_rules.count > 0
-      rule_view_controller = IphoneRuleViewController.alloc.initWithNibName("IphoneRuleViewController", bundle: nil)
+      rule_view_controller = IphoneRuleViewController.alloc.initWithNibName("IphoneRuleView", bundle: nil)
       rule_view_controller.rules = referenced_rules
       rule_view_controller.delegate = delegate
       rule_view_controller.title = "Rules"

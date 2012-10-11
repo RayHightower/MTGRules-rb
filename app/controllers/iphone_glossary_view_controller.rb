@@ -4,10 +4,9 @@ class IphoneGlossaryViewController < UITableViewController
   GLOSSARY_CELL_IDENTIFIER = "IphoneGlossaryCell"
 
   attr_accessor :delegate
-  attr_accessor :tableCell
   attr_accessor :glossary
 
-  ib_outlet :tableCell, UITableViewCell
+  outlet :tableCell, UITableViewCell
 
 
   def viewDidLoad
@@ -96,8 +95,8 @@ class IphoneGlossaryViewController < UITableViewController
     cell = table_view.dequeueReusableCellWithIdentifier(GLOSSARY_CELL_IDENTIFIER)
     if cell.nil?
       NSBundle.mainBundle.loadNibNamed(GLOSSARY_CELL_IDENTIFIER, owner: self, options: nil)
-      cell = @tableCell
-      @tableCell = nil;
+      cell = tableCell
+      tableCell = nil;
     end
 
     headerLabel = cell.viewWithTag(1)
@@ -129,7 +128,7 @@ class IphoneGlossaryViewController < UITableViewController
     referenced_rules = delegate.database.get_rules_referenced_by_glossary_term(entry.name)
 
     if referenced_rules.count > 0
-      ruleViewController = RuleViewController.alloc.initWithNibName("RuleView", bundle: nil)
+      ruleViewController = IphoneRuleViewController.alloc.initWithNibName("IphoneRuleView", bundle: nil)
       ruleViewController.rules = referenced_rules
       ruleViewController.delegate = delegate
       ruleViewController.title = "Rules"

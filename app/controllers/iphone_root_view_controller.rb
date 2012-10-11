@@ -32,7 +32,7 @@ class IphoneRootViewController < UITableViewController
 
   def show_extra_info(key)
     text = delegate.database.get_extra_info(key)
-    extras_controller = IphoneExtrasViewController.alloc.initWithNibName("ExtrasView", bundle: nil)
+    extras_controller = IphoneExtrasViewController.alloc.initWithNibName("IphoneExtrasView", bundle: nil)
     extras_controller.set_extras_text(text)
     extras_controller.delegate = delegate
     extras_controller.title = key
@@ -41,7 +41,7 @@ class IphoneRootViewController < UITableViewController
 
 
   def show_glossary
-    glossary_controller = IphoneGlossaryViewController.alloc.initWithNibName("GlossaryView", bundle: nil)
+    glossary_controller = IphoneGlossaryViewController.alloc.initWithNibName("IphoneGlossaryView", bundle: nil)
     glossary_controller.glossary = delegate.database.get_glossary
     glossary_controller.delegate = delegate
     glossary_controller.title = "Glossary"
