@@ -79,7 +79,7 @@ class IphoneGlossaryViewController < UITableViewController
 
   def body_height_for(text)
     cellFont = UIFont.fontWithName("Helvetica", size: 14.0)
-    constraintSize = CGSizeMake(self.view.frame.size.width - 40, 100000)
+    constraintSize = CGSizeMake(self.view.frame.size.width - 40, Float::MAX)
     label_size = text.sizeWithFont(cellFont, constrainedToSize: constraintSize)
     label_size.height
   end

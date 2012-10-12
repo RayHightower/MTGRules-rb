@@ -6,7 +6,7 @@ class IphoneRootViewController < RootViewController
     subsection_menu_controller = IphoneSubSectionMenuController.alloc.initWithStyle(UITableViewStylePlain)
     subsection_menu_controller.contents = node
     subsection_menu_controller.delegate = delegate
-    navigationController().pushViewController(subsection_menu_controller, animated: true)
+    navigationController.pushViewController(subsection_menu_controller, animated: true)
   end
 
 
@@ -16,7 +16,7 @@ class IphoneRootViewController < RootViewController
     extras_controller.set_extras_text(text)
     extras_controller.delegate = delegate
     extras_controller.title = key
-    navigationController().pushViewController(extras_controller, animated: true)
+    navigationController.pushViewController(extras_controller, animated: true)
   end
 
 
@@ -25,14 +25,14 @@ class IphoneRootViewController < RootViewController
     glossary_controller.glossary = delegate.database.get_glossary
     glossary_controller.delegate = delegate
     glossary_controller.title = "Glossary"
-    navigationController().pushViewController(glossary_controller, animated: true)
+    navigationController.pushViewController(glossary_controller, animated: true)
   end
 
 
   def search(sender)
     search_controller = IphoneSearchController.alloc.initWithNibName("IphoneSearchView", bundle: nil)
     search_controller.delegate = delegate
-    navigationController().pushViewController(search_controller, animated: true)
+    navigationController.pushViewController(search_controller, animated: true)
   end
 
 

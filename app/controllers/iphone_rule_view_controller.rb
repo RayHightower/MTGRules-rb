@@ -22,7 +22,7 @@ class IphoneRuleViewController < UITableViewController
 
   def body_height_for(text)
     cellFont = UIFont.fontWithName("Helvetica", size: 14.0)
-    constraintSize = CGSizeMake(self.view.frame.size.width - 40, 100000)
+    constraintSize = CGSizeMake(self.view.frame.size.width - 40, Float::MAX)
     labelSize = text.sizeWithFont(cellFont, constrainedToSize: constraintSize, lineBreakMode: UILineBreakModeWordWrap)
     labelSize.height
   end

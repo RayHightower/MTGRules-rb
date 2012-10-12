@@ -59,7 +59,7 @@ class IphoneSearchController < UIViewController
 
   def body_height_for(text)
     cell_font = UIFont.fontWithName("Helvetica", size: 14.0)
-    constraint_size = CGSizeMake(self.view.frame.size.width - 40, 100000.0)
+    constraint_size = CGSizeMake(self.view.frame.size.width - 40, Float::MAX)
     label_size = text.sizeWithFont(cell_font, constrainedToSize: constraint_size, lineBreakMode: UILineBreakModeWordWrap)
     label_size.height
   end
