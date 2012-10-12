@@ -1,11 +1,11 @@
-class IpadSubSectionmenuController < UITableViewController
+class IpadSubSectionMenuController < UITableViewController
 
   attr_accessor :delegate, :contents, :detailViewController
 
 
   def viewDidLoad
     super
-    self.title = contents.name
+    self.title = contents.text
   end
 
 
@@ -20,7 +20,7 @@ class IpadSubSectionmenuController < UITableViewController
 
 
   def tableView(tableView, numberOfRowsInSection: section)
-    contents.numberOfChildren
+    contents.size
   end
 
 
@@ -29,31 +29,29 @@ class IpadSubSectionmenuController < UITableViewController
 
     cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) ||  UITableViewCell.alloc.initWithStyle(UITableViewCellStyleDefault, reuseIdentifier: cellIdentifier)
 
-    child = contents.childAtIndex(indexPath.row)
-    if child.has_children?
-      cell.accessoryType = child.has_children? ? UITableViewCellAccessoryDisclosureIndicator : cell.accessoryType = UITableViewCellAccessoryNone
-      cell.textLabel.text = child.body
-    end
+    child = contents[indexPath.row]
+    cell.accessoryType = child.has_children? ? UITableViewCellAccessoryDisclosureIndicator : cell.accessoryType = UITableViewCellAccessoryNone
+    cell.textLabel.text = child.text
 
     cell
   end
 
 
   def showRulesFor(entry)
-    rules = delegate.getRulesForSubsection(entry.subsection)
-    detailViewController.detailItem = rules
-    detailViewController.titleItem.title = "#{content.text} - #{entry.text}"
+    rules = delegate.database.get_rules_for_subsection(entry.subsection)
+    detailViewController.detail_item = rules
+    detailViewController.titleItem.title = "#{entry.text} - #{entry.text}"
   end
 
 
   def tableView(tableView, didSelectRowAtIndexPath: indexPath)
-    child = contents.children[indexPath.row]
+    child = contents[indexPath.row]
     if child.has_children?
-      subsubsectionMenuController = IPadSubSubSectionMenuController.alloc.initWithStyle(UITableViewStylePlain)
+      subsubsectionMenuController = IpadSubSubSectionMenuController.alloc.initWithStyle(UITableViewStylePlain)
       subsubsectionMenuController.contents = child
       subsubsectionMenuController.delegate = delegate
       subsubsectionMenuController.detailViewController = detailViewController
-      navigationController(pushViewController: subsubsectionMenuController, animated: true)
+      navigationController.pushViewController(subsubsectionMenuController, animated: true)
     else
       showRulesFor(child)
     end

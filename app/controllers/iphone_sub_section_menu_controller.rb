@@ -39,7 +39,7 @@ class IphoneSubSectionMenuController < UITableViewController
     rule_view_controller.rules = rules
     rule_view_controller.delegate = delegate
     rule_view_controller.title = entry.text
-    navigationController().pushViewController(rule_view_controller, animated: true)
+    navigationController.pushViewController(rule_view_controller, animated: true)
   end
 
 

@@ -1,4 +1,4 @@
-class IpadSubSubSectionmenuViewController < UITableViewController
+class IpadSubSubSectionMenuController < UITableViewController
   attr_accessor :delegate, :contents, :detailViewController
 
 
@@ -19,7 +19,7 @@ class IpadSubSubSectionmenuViewController < UITableViewController
 
 
   def tableView(tableView, numberOfRowsInSection: section)
-    contents.numberOfChildren
+    contents.size
   end
 
 
@@ -31,7 +31,7 @@ class IpadSubSubSectionmenuViewController < UITableViewController
       cell = UITableViewCell.alloc.initWithStyle(UITableViewCellStyleDefault, reuseIdentifier: cellIdentifier)
     end
 
-    child = contents.childAtIndex(indexPath.row)
+    child = contents[indexPath.row]
     cell.textLabel.text = child.text
 
     cell
@@ -39,14 +39,14 @@ class IpadSubSubSectionmenuViewController < UITableViewController
 
 
   def showRulesFor(entry)
-    rules = delegate.getRulesForSubsection(entry.subsection, subsubsection: entry.subsubsection)
-    detailViewController.detailItem = rules
+    rules = delegate.database.get_rules_for_subsection(entry.subsection, and_subsubsection: entry.subsubsection)
+    detailViewController.detail_item = rules
     detailViewController.titleItem.title = "#{contents.text} - #{entry.text}"
   end
 
 
   def tableView(tableView, didSelectRowAtIndexPath: indexPath)
-    child = contents.children[indexPath.row]
+    child = contents[indexPath.row]
     self.showRulesFor(child)
   end
 

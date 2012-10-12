@@ -14,6 +14,7 @@ class IpadRootViewController < RootViewController
   def show_section(node)
     subsection_menu_controller = IpadSubSectionMenuController.alloc.initWithStyle(UITableViewStylePlain)
     subsection_menu_controller.contents = node
+    subsection_menu_controller.detailViewController = detailViewController
     subsection_menu_controller.delegate = delegate
     navigationController.pushViewController(subsection_menu_controller, animated: true)
   end

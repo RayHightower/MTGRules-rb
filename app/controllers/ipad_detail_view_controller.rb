@@ -14,10 +14,8 @@ class IpadDetailViewController < UIViewController
   def configure_view
     @detail_items = []
     if @detail_item.is_a?(String)
-      puts "======> String"
       @is_glossary = false
       html_string = @detail_item.split("\n").collect {|line| "<p>#{line}</p>"}.join
-      puts html_string
       detailWebView.loadHTMLString(html_string, baseURL: nil)
       detailTableView.hidden = true
       detailWebView.hidden = false
@@ -40,7 +38,7 @@ class IpadDetailViewController < UIViewController
 
         section_arrays.each { |section_array| @detail_items << the_collation.sortedArrayFromArray(section_array, collationStringSelector: :name) }
       else
-        @detail_tems = @detail_item.clone
+        @detail_items = @detail_item
       end
 
       detailTableView.hidden = false
@@ -48,7 +46,6 @@ class IpadDetailViewController < UIViewController
       detailTableView.reloadData
       detailTableView.scrollToRowAtIndexPath(NSIndexPath.indexPathForRow(0, inSection: 0), atScrollPosition: UITableViewScrollPositionTop, animated: false)
     end
-    puts @detail_items
   end
 
 
@@ -68,7 +65,7 @@ class IpadDetailViewController < UIViewController
 
 
   def didRotateFromInterfaceOrientation(fromInterfaceOrientation)
-    if detail_item.is_a? String
+    if detail_item.is_a?(String)
       configureView
     else
       detailTableView.reloadData
@@ -166,7 +163,7 @@ class IpadDetailViewController < UIViewController
     headerLabel = cell.viewWithTag(1)
     bodyLabel = cell.viewWithTag(2)
 
-    id detail = @is_glossary ? @detail_items[indexPath.section][indexPath.row] : @detail_items[indexPath.row]
+    detail = @is_glossary ? @detail_items[indexPath.section][indexPath.row] : @detail_items[indexPath.row]
     if detail.is_a? GlossaryEntry
       headerLabel.text = detail.term
     else
@@ -196,10 +193,11 @@ class IpadDetailViewController < UIViewController
 
   def tableView(tableView, didSelectRowAtIndexPath: indexPath)
     detail = @is_glossary ? @detail_items[indexPath.section][indexPath.row] : @detail_items[indexPath.row]
-    rules = @is_glossary ? delegate.getRulesReferencedByGlossaryTerm(entry.term) : delegate.getRulesReferencedByRule(detail)
+    rules = @is_glossary ? delegate.database.get_rules_referenced_by_glossaryTerm(entry.term) : delegate.database.get_rules_referenced_by_rule(detail)
 
     if rules.count > 0
-      popOverRules = IPadRulePopOverTableViewController.alloc.init
+      puts "====== GOT RULES"
+      popOverRules = IpadRulePopOverTableViewController.alloc.init
       popOverRules.rules = rules
       popOverRules.delegate = delegate
       f = self.view.window.frame
@@ -210,13 +208,15 @@ class IpadDetailViewController < UIViewController
       f.size.height = (tableHeight < maxHeight) ? tableHeight : maxHeight
       popOverRules.view.frame = f
 
-      @popover_controller = UIPopoverController.alloc.initWithContentViewController(popOverRules)
-      @popover_controller.delegate = self
+      puts "====== POPPING UP"
+      @popover = UIPopoverController.alloc.initWithContentViewController(popOverRules)
+      @popover.delegate = self
       popOverRules.contentSizeForViewInPopover = f.size
-      @popover_controller.popoverContentSize = f.size
+      @popover.popoverContentSize = f.size
       selectedCell = tableView.cellForRowAtIndexPath(indexPath)
-
-      @popover_controller.presentPopoverFromRect(selectedCell.frame, inView: view, permittedArrowDirections: UIPopoverArrowDirectionAny, animated: true)
+    
+      puts "====== PRESENTING"
+      @popover.presentPopoverFromRect(selectedCell.frame, inView: view, permittedArrowDirections: UIPopoverArrowDirectionAny, animated: true)
     end
   end
 
