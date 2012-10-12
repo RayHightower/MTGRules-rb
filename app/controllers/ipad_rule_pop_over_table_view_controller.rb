@@ -53,7 +53,6 @@ class IpadRulePopOverTableViewController < UITableViewController
     bodyLabel = cell.viewWithTag(2)
 
     clause = rules[indexPath.row]
-    puts "Clause: #{clause}"
     headerLabel.text = "#{clause.subsection}.#{clause.subsubsection}"
     bodyLabel.text = clause.body
 

@@ -193,29 +193,26 @@ class IpadDetailViewController < UIViewController
 
   def tableView(tableView, didSelectRowAtIndexPath: indexPath)
     detail = @is_glossary ? @detail_items[indexPath.section][indexPath.row] : @detail_items[indexPath.row]
-    rules = @is_glossary ? delegate.database.get_rules_referenced_by_glossaryTerm(entry.term) : delegate.database.get_rules_referenced_by_rule(detail)
+    rules = @is_glossary ? delegate.database.get_rules_referenced_by_glossary_term(detail.term) : delegate.database.get_rules_referenced_by_rule(detail)
 
     if rules.count > 0
-      puts "====== GOT RULES"
       popOverRules = IpadRulePopOverTableViewController.alloc.init
       popOverRules.rules = rules
       popOverRules.delegate = delegate
       f = self.view.window.frame
       f.size.width -= 50
       tableHeight = popOverRules.tableViewHeight
-      shortenBy = (interfaceOrientation == UIInterfaceOrientationPortrait) || (interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) ? 100 : 50
+      shortenBy = (interfaceOrientation == UIInterfaceOrientationPortrait) || (interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) ? 150 : 75
       maxHeight = f.size.height - shortenBy
       f.size.height = (tableHeight < maxHeight) ? tableHeight : maxHeight
       popOverRules.view.frame = f
 
-      puts "====== POPPING UP"
       @popover = UIPopoverController.alloc.initWithContentViewController(popOverRules)
       @popover.delegate = self
       popOverRules.contentSizeForViewInPopover = f.size
       @popover.popoverContentSize = f.size
       selectedCell = tableView.cellForRowAtIndexPath(indexPath)
     
-      puts "====== PRESENTING"
       @popover.presentPopoverFromRect(selectedCell.frame, inView: view, permittedArrowDirections: UIPopoverArrowDirectionAny, animated: true)
     end
   end

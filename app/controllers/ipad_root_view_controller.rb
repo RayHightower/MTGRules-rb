@@ -28,7 +28,7 @@ class IpadRootViewController < RootViewController
 
   def show_glossary
     detailViewController.detail_item = delegate.database.get_glossary
-    glossary_controller.title = "Glossary"
+    detailViewController.titleItem.title = "Glossary"
   end
 
 
