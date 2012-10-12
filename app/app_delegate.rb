@@ -7,7 +7,6 @@ class AppDelegate < NSObject
   outlet :window, UIWindow
   outlet :navigationController, UINavigationController
   outlet :splitViewController, UISplitViewController
-#  outlet :detailViewController, IpadDetailViewController
   outlet :rootViewController, RootViewController
 
 

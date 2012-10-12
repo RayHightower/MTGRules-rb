@@ -44,6 +44,7 @@
 								<int key="NSvFlags">290</int>
 								<string key="NSFrame">{{20, 7}, {728, 29}}</string>
 								<reference key="NSSuperview" ref="828292181"/>
+								<reference key="NSWindow"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
@@ -75,6 +76,7 @@
 								<int key="NSvFlags">290</int>
 								<string key="NSFrame">{{20, 44}, {728, 60}}</string>
 								<reference key="NSSuperview" ref="828292181"/>
+								<reference key="NSWindow"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUITag">2</int>
@@ -106,6 +108,7 @@
 						</array>
 						<string key="NSFrameSize">{768, 112}</string>
 						<reference key="NSSuperview" ref="848703305"/>
+						<reference key="NSWindow"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MCAwAA</bytes>
@@ -119,6 +122,7 @@
 				</array>
 				<string key="NSFrameSize">{768, 113}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="828292181"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
@@ -184,7 +188,7 @@
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
-				<string key="-1.CustomClassName">IPadDetailViewController</string>
+				<string key="-1.CustomClassName">IpadDetailViewController</string>
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -198,13 +202,118 @@
 			<nil key="sourceID"/>
 			<int key="maxID">5</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">IpadDetailViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="bodyHeightFor:">id</string>
+						<string key="configure_view">id</string>
+						<string key="didRotateFromInterfaceOrientation:">id</string>
+						<string key="dismiss_search_controller:">id</string>
+						<string key="getCellTextAtIndexPath:">id</string>
+						<string key="numberOfSectionsInTableView:">id</string>
+						<string key="open_search_controller">id</string>
+						<string key="popoverControllerDidDismissPopover:">id</string>
+						<string key="sectionIndexTitlesForTableView:">id</string>
+						<string key="select:">id</string>
+						<string key="shouldAutorotateToInterfaceOrientation:">id</string>
+						<string key="viewDidUnload">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="bodyHeightFor:">
+							<string key="name">bodyHeightFor:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="configure_view">
+							<string key="name">configure_view</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="didRotateFromInterfaceOrientation:">
+							<string key="name">didRotateFromInterfaceOrientation:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="dismiss_search_controller:">
+							<string key="name">dismiss_search_controller:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="getCellTextAtIndexPath:">
+							<string key="name">getCellTextAtIndexPath:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="numberOfSectionsInTableView:">
+							<string key="name">numberOfSectionsInTableView:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="open_search_controller">
+							<string key="name">open_search_controller</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="popoverControllerDidDismissPopover:">
+							<string key="name">popoverControllerDidDismissPopover:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="sectionIndexTitlesForTableView:">
+							<string key="name">sectionIndexTitlesForTableView:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="select:">
+							<string key="name">select:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="shouldAutorotateToInterfaceOrientation:">
+							<string key="name">shouldAutorotateToInterfaceOrientation:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="viewDidUnload">
+							<string key="name">viewDidUnload</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="detailTableView">UITableView</string>
+						<string key="detailWebView">UIWebView</string>
+						<string key="searchButton">UIBarButtonItem</string>
+						<string key="tableCell">UITableViewCell</string>
+						<string key="titleItem">UIBarButtonItem</string>
+						<string key="toolbar">UIToolbar</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="detailTableView">
+							<string key="name">detailTableView</string>
+							<string key="candidateClassName">UITableView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="detailWebView">
+							<string key="name">detailWebView</string>
+							<string key="candidateClassName">UIWebView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="searchButton">
+							<string key="name">searchButton</string>
+							<string key="candidateClassName">UIBarButtonItem</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="tableCell">
+							<string key="name">tableCell</string>
+							<string key="candidateClassName">UITableViewCell</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="titleItem">
+							<string key="name">titleItem</string>
+							<string key="candidateClassName">UIBarButtonItem</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="toolbar">
+							<string key="name">toolbar</string>
+							<string key="candidateClassName">UIToolbar</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/IpadDetailViewController.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
-		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
-			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.iPhoneOS</string>
-			<real value="1536" key="NS.object.0"/>
-		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<string key="IBCocoaTouchPluginVersion">1926</string>

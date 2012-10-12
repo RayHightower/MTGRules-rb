@@ -45,12 +45,6 @@ class RootViewController < UITableViewController
   end
 
 
-  def search(sender)
-    search_controller = IphoneSearchController.alloc.initWithNibName("IphoneSearchView", bundle: nil)
-    search_controller.delegate = delegate
-    navigationController().pushViewController(search_controller, animated: true)
-  end
-
   def didReceiveMemoryWarning
     super.didReceiveMemoryWarning
   end

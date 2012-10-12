@@ -1,7 +1,7 @@
 class IpadDetailViewController < UIViewController
   extend IB
 
-  attr_accessor :detail_item, :delegate, :popover_controller
+  attr_accessor :detail_item, :delegate
 
   outlet :toolbar, UIToolbar
   outlet :detailWebView, UIWebView
@@ -12,19 +12,22 @@ class IpadDetailViewController < UIViewController
 
 
   def configure_view
-    if detail_item.is_a? String
+    @detail_items = []
+    if @detail_item.is_a?(String)
+      puts "======> String"
       @is_glossary = false
-      html_string = detailItem.split("\n").collect {|line| "<p>#{line}</p>"}.join
+      html_string = @detail_item.split("\n").collect {|line| "<p>#{line}</p>"}.join
+      puts html_string
       detailWebView.loadHTMLString(html_string, baseURL: nil)
       detailTableView.hidden = true
       detailWebView.hidden = false
     else
-      @is_glossary = detail_item[0].is_a? GlossaryEntry
+      @is_glossary = @detail_item[0].is_a?(GlossaryEntry)
 
       if @is_glossary
         @detail_items = []
         the_collation = UILocalizedIndexedCollation.currentCollation
-        detail_item.each do |item|
+        @detail_item.each do |item|
           sect = the_collation.sectionForObject(item, collationStringSelector: :name)
           item.section_number = sect
         end
@@ -33,11 +36,11 @@ class IpadDetailViewController < UIViewController
         section_arrays = []
         (0..high_section).each {|i| section_arrays << [] }
 
-        detal_item_array.each {|i| section_arrays[item.section_number] << item }
+        @detail_item.each {|i| section_arrays[item.section_number] << item }
 
         section_arrays.each { |section_array| @detail_items << the_collation.sortedArrayFromArray(section_array, collationStringSelector: :name) }
       else
-        @detail_tems = detail_item.clone
+        @detail_tems = @detail_item.clone
       end
 
       detailTableView.hidden = false
@@ -45,16 +48,17 @@ class IpadDetailViewController < UIViewController
       detailTableView.reloadData
       detailTableView.scrollToRowAtIndexPath(NSIndexPath.indexPathForRow(0, inSection: 0), atScrollPosition: UITableViewScrollPositionTop, animated: false)
     end
+    puts @detail_items
   end
 
 
   def detail_item=(new_detail_item)
     if @detail_item != new_detail_item
-      detail_item = new_detail_item
+      @detail_item = new_detail_item
       configure_view
     end
 
-    popoverController.dismissPopoverAnimated(true) unless popoverController.nil?
+    @popover_controller.dismissPopoverAnimated(true) unless @popover_controller.nil?
   end
 
 
@@ -73,7 +77,7 @@ class IpadDetailViewController < UIViewController
 
 
   def open_search_controller
-    search_controller = IPadSearchController.alloc.initWithNibName("IPadSearchView", bundle: nil)
+    search_controller = IPadSearchController.alloc.initWithNibName("IpadSearchView", bundle: nil)
     search_controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal
     search_controller.modalPresentationStyle = UIModalPresentationFullScreen
     search_controller.detailViewController = self
@@ -97,9 +101,9 @@ class IpadDetailViewController < UIViewController
   def splitViewController(svc, willHideViewController: a_view_controller, withBarButtonItem: bar_button_item, forPopoverController: pc)
     bar_button_item.title = "Contents"
     items = toolbar.items.clone
-    items.insert(0, barButtonItem)
-    toolbar.setItems(items, animated:YES)
-    @popoverController = pc
+    items.insert(0, bar_button_item)
+    toolbar.setItems(items, animated: true)
+    @popover_controller = pc
   end
 
   def splitViewController(svc, willShowViewController: a_view_controller, invalidatingBarButtonItem: bar_button_item)
@@ -111,7 +115,7 @@ class IpadDetailViewController < UIViewController
 
 
   def viewDidUnload
-    @popoverController = nil
+    @popover_controller = nil
   end
 
 
@@ -121,7 +125,7 @@ class IpadDetailViewController < UIViewController
 
 
   def tableView(tableView, titleForHeaderInSection: section)
-    return UILocalizedIndexedCollation.currentCollation.sectionTitles[section] if is_glossary && detailItems.count > 0
+    return UILocalizedIndexedCollation.currentCollation.sectionTitles[section] if @is_glossary && @detail_items.count > 0
     nil
   end
 
@@ -132,12 +136,12 @@ class IpadDetailViewController < UIViewController
 
 
   def numberOfSectionsInTableView(tableView)
-    @is_glossary ? detailItems.count : 1
+    @is_glossary ? @detail_items.count : 1
   end
 
 
   def tableView(tableView, numberOfRowsInSection: section)
-    @is_glossary ? detailItems[section].count : detailItems.count
+    @is_glossary ? @detail_items[section].count : @detail_items.count
   end
 
 
@@ -162,7 +166,7 @@ class IpadDetailViewController < UIViewController
     headerLabel = cell.viewWithTag(1)
     bodyLabel = cell.viewWithTag(2)
 
-    id detail = @is_glossary ? detailItems[indexPath.section][indexPath.row] : detailItems[indexPath.row]
+    id detail = @is_glossary ? @detail_items[indexPath.section][indexPath.row] : @detail_items[indexPath.row]
     if detail.is_a? GlossaryEntry
       headerLabel.text = detail.term
     else
@@ -180,7 +184,7 @@ class IpadDetailViewController < UIViewController
 
 
   def getCellTextAtIndexPath(indexPath)
-    detail = @is_glossary ? detailItems[indexPath.section][indexPath.row] : detailItems[indexPath.row]
+    detail = @is_glossary ? @detail_items[indexPath.section][indexPath.row] : @detail_items[indexPath.row]
     detail.body
   end
 
@@ -191,7 +195,7 @@ class IpadDetailViewController < UIViewController
 
 
   def tableView(tableView, didSelectRowAtIndexPath: indexPath)
-    detail = @is_glossary ? detailItems[indexPath.section][indexPath.row] : detailItems[indexPath.row]
+    detail = @is_glossary ? @detail_items[indexPath.section][indexPath.row] : @detail_items[indexPath.row]
     rules = @is_glossary ? delegate.getRulesReferencedByGlossaryTerm(entry.term) : delegate.getRulesReferencedByRule(detail)
 
     if rules.count > 0
@@ -206,18 +210,18 @@ class IpadDetailViewController < UIViewController
       f.size.height = (tableHeight < maxHeight) ? tableHeight : maxHeight
       popOverRules.view.frame = f
 
-      popOver = UIPopoverController.alloc.initWithContentViewController(popOverRules)
-      popOver.delegate = self
+      @popover_controller = UIPopoverController.alloc.initWithContentViewController(popOverRules)
+      @popover_controller.delegate = self
       popOverRules.contentSizeForViewInPopover = f.size
-      popOver.popoverContentSize = f.size
+      @popover_controller.popoverContentSize = f.size
       selectedCell = tableView.cellForRowAtIndexPath(indexPath)
 
-      popOver.presentPopoverFromRect(selectedCell.frame, inView: view, permittedArrowDirections: UIPopoverArrowDirectionAny, animated: true)
+      @popover_controller.presentPopoverFromRect(selectedCell.frame, inView: view, permittedArrowDirections: UIPopoverArrowDirectionAny, animated: true)
     end
   end
 
 
-  def popoverControllerDidDismissPopover(popoverController)
+  def popoverControllerDidDismissPopover(pc)
     detailTableView.deselectRowAtIndexPath(detailTableView.indexPathForSelectedRow, animated: true)
   end
 

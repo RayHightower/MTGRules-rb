@@ -4,6 +4,13 @@ class IpadRootViewController < RootViewController
   outlet :detailViewController, IpadDetailViewController
 
 
+  def viewDidLoad
+    super
+    detailViewController.delegate = delegate
+    show_extra_info("Intro")
+  end
+  
+
   def show_section(node)
     subsection_menu_controller = IpadSubSectionMenuController.alloc.initWithStyle(UITableViewStylePlain)
     subsection_menu_controller.contents = node

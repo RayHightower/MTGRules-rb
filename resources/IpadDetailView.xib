@@ -276,7 +276,7 @@
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
-				<string key="-1.CustomClassName">IPadDetailViewController</string>
+				<string key="-1.CustomClassName">IpadDetailViewController</string>
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -298,19 +298,72 @@
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
-					<string key="className">IPadDetailViewController</string>
+					<string key="className">IpadDetailViewController</string>
 					<string key="superclassName">UIViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">select:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">select:</string>
-						<object class="IBActionInfo" key="NS.object.0">
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="bodyHeightFor:">id</string>
+						<string key="configure_view">id</string>
+						<string key="didRotateFromInterfaceOrientation:">id</string>
+						<string key="dismiss_search_controller:">id</string>
+						<string key="getCellTextAtIndexPath:">id</string>
+						<string key="numberOfSectionsInTableView:">id</string>
+						<string key="open_search_controller">id</string>
+						<string key="popoverControllerDidDismissPopover:">id</string>
+						<string key="sectionIndexTitlesForTableView:">id</string>
+						<string key="select:">id</string>
+						<string key="shouldAutorotateToInterfaceOrientation:">id</string>
+						<string key="viewDidUnload">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="bodyHeightFor:">
+							<string key="name">bodyHeightFor:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="configure_view">
+							<string key="name">configure_view</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="didRotateFromInterfaceOrientation:">
+							<string key="name">didRotateFromInterfaceOrientation:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="dismiss_search_controller:">
+							<string key="name">dismiss_search_controller:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="getCellTextAtIndexPath:">
+							<string key="name">getCellTextAtIndexPath:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="numberOfSectionsInTableView:">
+							<string key="name">numberOfSectionsInTableView:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="open_search_controller">
+							<string key="name">open_search_controller</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="popoverControllerDidDismissPopover:">
+							<string key="name">popoverControllerDidDismissPopover:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="sectionIndexTitlesForTableView:">
+							<string key="name">sectionIndexTitlesForTableView:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="select:">
 							<string key="name">select:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-					</object>
+						<object class="IBActionInfo" key="shouldAutorotateToInterfaceOrientation:">
+							<string key="name">shouldAutorotateToInterfaceOrientation:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="viewDidUnload">
+							<string key="name">viewDidUnload</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="detailTableView">UITableView</string>
 						<string key="detailWebView">UIWebView</string>
@@ -347,7 +400,7 @@
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/IPadDetailViewController.h</string>
+						<string key="minorKey">./Classes/IpadDetailViewController.h</string>
 					</object>
 				</object>
 			</array>
