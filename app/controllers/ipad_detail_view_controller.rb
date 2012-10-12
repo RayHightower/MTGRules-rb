@@ -34,7 +34,7 @@ class IpadDetailViewController < UIViewController
         section_arrays = []
         (0..high_section).each {|i| section_arrays << [] }
 
-        @detail_item.each {|i| section_arrays[item.section_number] << item }
+        @detail_item.each {|item| section_arrays[item.section_number] << item }
 
         section_arrays.each { |section_array| @detail_items << the_collation.sortedArrayFromArray(section_array, collationStringSelector: :name) }
       else
