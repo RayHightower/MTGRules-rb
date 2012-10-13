@@ -74,10 +74,10 @@ class IpadDetailViewController < UIViewController
 
 
   def open_search_controller
-    search_controller = IPadSearchController.alloc.initWithNibName("IpadSearchView", bundle: nil)
+    search_controller = IpadSearchController.alloc.initWithNibName("IpadSearchView", bundle: nil)
     search_controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal
     search_controller.modalPresentationStyle = UIModalPresentationFullScreen
-    search_controller.detailViewController = self
+    search_controller.detail_view_controller = self
     search_controller.delegate = self.delegate
     presentModalViewController(search_controller, animated: true)
   end

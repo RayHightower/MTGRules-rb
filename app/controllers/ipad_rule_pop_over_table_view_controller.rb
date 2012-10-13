@@ -32,7 +32,7 @@ class IpadRulePopOverTableViewController < UITableViewController
 
 
   def bodyHeightFor(text)
-    cellFont = UIFont.fontWithName("Helvetica", size: 14.0)
+    cellFont = UIFont.fontWithName("Helvetica", size: 18.0)
     constraintSize = CGSizeMake(602, Float::MAX)
     labelSize = text.sizeWithFont(cellFont, constrainedToSize: constraintSize, lineBreakMode: UILineBreakModeWordWrap)
     labelSize.height
@@ -58,7 +58,7 @@ class IpadRulePopOverTableViewController < UITableViewController
 
     bodyLabel.lineBreakMode = UILineBreakModeWordWrap
     bodyLabel.numberOfLines = 0
-    bodyLabel.font = UIFont.fontWithName("Helvetica", size: 14.0)
+    bodyLabel.font = UIFont.fontWithName("Helvetica", size: 18.0)
     bodyFrame = bodyLabel.frame
     bodyFrame.size.height = bodyHeightFor(clause.body)
     bodyLabel.frame = bodyFrame
