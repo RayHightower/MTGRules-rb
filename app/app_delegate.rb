@@ -17,7 +17,7 @@ class AppDelegate < NSObject
 
     rootViewController.delegate = self
     rootViewController.contents = @top_level_contents
-    window.addSubview(Device.ipad? ? splitViewController.view : navigationController.view)
+    window.setRootViewController(Device.ipad? ? splitViewController : navigationController)
     window.makeKeyAndVisible
     true
   end

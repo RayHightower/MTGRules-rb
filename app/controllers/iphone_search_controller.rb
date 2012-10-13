@@ -3,14 +3,17 @@ class IphoneSearchController < UIViewController
 
   attr_accessor :delegate
 
-
-  ## ib outlets
   outlet :searchBar, UISearchBar
   outlet :resultsView, UITableView
   outlet :displayController, UISearchDisplayController
   outlet :tableCell, UITableViewCell
 
   CELL_IDENTIFIER = "IphoneRuleCell"
+
+  def shouldAutorotateToInterfaceOrientation(interface_orientation)
+    true
+  end
+
 
   def searchBarTextDidEndEditing(search_bar)
     search_bar.resignFirstResponder

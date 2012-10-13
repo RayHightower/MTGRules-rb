@@ -1,6 +1,5 @@
 class IpadSubSectionMenuController < UITableViewController
-
-  attr_accessor :delegate, :contents, :detailViewController
+  attr_accessor :delegate, :contents, :detail_view_controller
 
 
   def viewDidLoad
@@ -9,27 +8,27 @@ class IpadSubSectionMenuController < UITableViewController
   end
 
 
-  def shouldAutorotateToInterfaceOrientation(interfaceOrientation)
+  def shouldAutorotateToInterfaceOrientation(interface_orientation)
     true
   end
 
 
-  def numberOfSectionsInTableView(tableView)
+  def numberOfSectionsInTableView(table_view)
     1
   end
 
 
-  def tableView(tableView, numberOfRowsInSection: section)
+  def tableView(table_view, numberOfRowsInSection: section)
     contents.size
   end
 
 
-  def tableView(tableView, cellForRowAtIndexPath: indexPath)
-    cellIdentifier = "Cell"
+  def tableView(table_view, cellForRowAtIndexPath: index_path)
+    cell_identifier = "Cell"
 
-    cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) ||  UITableViewCell.alloc.initWithStyle(UITableViewCellStyleDefault, reuseIdentifier: cellIdentifier)
+    cell = tableView.dequeueReusableCellWithIdentifier(cell_identifier) ||  UITableViewCell.alloc.initWithStyle(UITableViewCellStyleDefault, reuseIdentifier: cell_identifier)
 
-    child = contents[indexPath.row]
+    child = contents[index_path.row]
     cell.accessoryType = child.has_children? ? UITableViewCellAccessoryDisclosureIndicator : cell.accessoryType = UITableViewCellAccessoryNone
     cell.textLabel.text = child.text
 
@@ -39,19 +38,19 @@ class IpadSubSectionMenuController < UITableViewController
 
   def showRulesFor(entry)
     rules = delegate.database.get_rules_for_subsection(entry.subsection)
-    detailViewController.detail_item = rules
-    detailViewController.titleItem.title = "#{entry.text} - #{entry.text}"
+    @detail_view_controller.detail_item = rules
+    @detail_view_controller.titleItem.title = "#{entry.text} - #{entry.text}"
   end
 
 
-  def tableView(tableView, didSelectRowAtIndexPath: indexPath)
-    child = contents[indexPath.row]
+  def tableView(table_view, didSelectRowAtIndexPath: index_path)
+    child = contents[index_path.row]
     if child.has_children?
-      subsubsectionMenuController = IpadSubSubSectionMenuController.alloc.initWithStyle(UITableViewStylePlain)
-      subsubsectionMenuController.contents = child
-      subsubsectionMenuController.delegate = delegate
-      subsubsectionMenuController.detailViewController = detailViewController
-      navigationController.pushViewController(subsubsectionMenuController, animated: true)
+      subsubsection_menu_controller = IpadSubSubSectionMenuController.alloc.initWithStyle(UITableViewStylePlain)
+      subsubsection_menu_controller.contents = child
+      subsubsection_menu_controller.delegate = delegate
+      subsubsection_menu_controller.detail_view_controller = @detail_view_controller
+      navigationController.pushViewController(subsubsection_menu_controller, animated: true)
     else
       showRulesFor(child)
     end

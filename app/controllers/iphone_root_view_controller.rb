@@ -2,6 +2,11 @@ class IphoneRootViewController < RootViewController
   extend IB
 
 
+  def shouldAutorotateToInterfaceOrientation(interfaceOrientation)
+    true
+  end
+
+
   def show_section(node)
     subsection_menu_controller = IphoneSubSectionMenuController.alloc.initWithStyle(UITableViewStylePlain)
     subsection_menu_controller.contents = node

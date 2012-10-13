@@ -30,13 +30,12 @@ class IpadDetailViewController < UIViewController
           item.section_number = sect
         end
 
-        high_section = the_collation.sectionTitles.count
-        section_arrays = []
-        (0..high_section).each {|i| section_arrays << [] }
+        high_section = the_collation.sectionTitles.size
+        section_arrays = Array.new(high_section + 1, [])
 
         @detail_item.each {|item| section_arrays[item.section_number] << item }
 
-        section_arrays.each { |section_array| @detail_items << the_collation.sortedArrayFromArray(section_array, collationStringSelector: :name) }
+        section_arrays.each {|section_array| @detail_items << the_collation.sortedArrayFromArray(section_array, collationStringSelector: :name) }
       else
         @detail_items = @detail_item
       end
@@ -66,20 +65,10 @@ class IpadDetailViewController < UIViewController
 
   def didRotateFromInterfaceOrientation(fromInterfaceOrientation)
     if detail_item.is_a?(String)
-      configureView
+      configure_view
     else
       detailTableView.reloadData
     end
-  end
-
-
-  def open_search_controller
-    search_controller = IpadSearchController.alloc.initWithNibName("IpadSearchView", bundle: nil)
-    search_controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal
-    search_controller.modalPresentationStyle = UIModalPresentationFullScreen
-    search_controller.detail_view_controller = self
-    search_controller.delegate = self.delegate
-    presentModalViewController(search_controller, animated: true)
   end
 
 
@@ -89,7 +78,12 @@ class IpadDetailViewController < UIViewController
 
 
   def select(sender)
-    open_search_controller
+    search_controller = IpadSearchController.alloc.initWithNibName("IpadSearchView", bundle: nil)
+    search_controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal
+    search_controller.modalPresentationStyle = UIModalPresentationFullScreen
+    search_controller.detail_view_controller = self
+    search_controller.delegate = @delegate
+    presentModalViewController(search_controller, animated: true)
   end
 
   ib_action :select
@@ -122,8 +116,7 @@ class IpadDetailViewController < UIViewController
 
 
   def tableView(tableView, titleForHeaderInSection: section)
-    return UILocalizedIndexedCollation.currentCollation.sectionTitles[section] if @is_glossary && @detail_items.count > 0
-    nil
+    (@is_glossary && !@detail_items.empty?) ?  UILocalizedIndexedCollation.currentCollation.sectionTitles[section] : nil
   end
 
 
@@ -133,18 +126,18 @@ class IpadDetailViewController < UIViewController
 
 
   def numberOfSectionsInTableView(tableView)
-    @is_glossary ? @detail_items.count : 1
+    @is_glossary ? @detail_items.size : 1
   end
 
 
   def tableView(tableView, numberOfRowsInSection: section)
-    @is_glossary ? @detail_items[section].count : @detail_items.count
+    @is_glossary ? @detail_items[section].size : @detail_items.size
   end
 
 
   def bodyHeightFor(text)
     cellFont = UIFont.fontWithName("Helvetica", size: 18.0)
-    constraintSize = CGSizeMake(detailTableView.frame.size.width - 75, Float::MAX)
+    constraintSize = CGSizeMake(detailTableView.frame.size.width - 75,  Float::MAX)
     labelSize = text.sizeWithFont(cellFont, constrainedToSize: constraintSize)
     labelSize.height
   end
@@ -195,16 +188,16 @@ class IpadDetailViewController < UIViewController
     detail = @is_glossary ? @detail_items[indexPath.section][indexPath.row] : @detail_items[indexPath.row]
     rules = @is_glossary ? delegate.database.get_rules_referenced_by_glossary_term(detail.term) : delegate.database.get_rules_referenced_by_rule(detail)
 
-    if rules.count > 0
+    unless rules.empty?
       popOverRules = IpadRulePopOverTableViewController.alloc.init
       popOverRules.rules = rules
       popOverRules.delegate = delegate
       f = self.view.window.frame
       f.size.width -= 50
       tableHeight = popOverRules.tableViewHeight
-      shortenBy = (interfaceOrientation == UIInterfaceOrientationPortrait) || (interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) ? 150 : 75
+      shortenBy = [UIInterfaceOrientationPortrait, UIInterfaceOrientationPortraitUpsideDown].include?(interfaceOrientation) ? 150 : 75
       maxHeight = f.size.height - shortenBy
-      f.size.height = (tableHeight < maxHeight) ? tableHeight : maxHeight
+      f.size.height = [tableHeight, maxHeight].min
       popOverRules.view.frame = f
 
       @popover = UIPopoverController.alloc.initWithContentViewController(popOverRules)

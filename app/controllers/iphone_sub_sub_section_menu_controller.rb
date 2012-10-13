@@ -9,22 +9,23 @@ class IphoneSubSubSectionMenuController < UITableViewController
   end
 
 
-  def numberOfSectionsInTableView(tableView)
+  def shouldAutorotateToInterfaceOrientation(interface_orientation)
+    true
+  end
+
+
+  def numberOfSectionsInTableView(table_view)
     1
   end
 
 
-  def tableView(tableView, numberOfRowsInSection: section)
+  def tableView(table_view, numberOfRowsInSection: section)
     contents.size
   end
 
 
-  def tableView(tableView, cellForRowAtIndexPath: index_path)
-    cell = tableView.dequeueReusableCellWithIdentifier("cell")
-    if cell.nil?
-      cell = UITableViewCell.alloc.initWithStyle(UITableViewCellStyleDefault, reuseIdentifier: "cell")
-    end
-
+  def tableView(table_view, cellForRowAtIndexPath: index_path)
+    cell = table_view.dequeueReusableCellWithIdentifier("cell") || UITableViewCell.alloc.initWithStyle(UITableViewCellStyleDefault, reuseIdentifier: "cell")
     child = contents[index_path.row]
     cell.accessoryType = UITableViewCellAccessoryNone
     cell.textLabel.text = child.text

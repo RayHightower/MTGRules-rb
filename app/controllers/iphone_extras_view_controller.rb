@@ -5,8 +5,12 @@ class IphoneExtrasViewController < UIViewController
 
   def viewDidLoad
     super
-
     title = "Rules"
+  end
+
+
+  def shouldAutorotateToInterfaceOrientation(interface_orientation)
+    true
   end
 
 

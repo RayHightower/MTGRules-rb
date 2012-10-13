@@ -6,103 +6,103 @@ class IpadRulePopOverTableViewController < UITableViewController
   outlet :tableCell, UITableViewCell
 
 
-  def shouldAutorotateToInterfaceOrientation(interfaceOrientation)
+  def shouldAutorotateToInterfaceOrientation(interface_orientation)
     true
   end
 
 
-  def didRotateFromInterfaceOrientation(fromInterfaceOrientation)
+  def didRotateFromInterfaceOrientation(from_interface_orientation)
     view.reloadData
   end
 
 
-  def numberOfSectionsInTableView(tableView)
+  def numberOfSectionsInTableView(table_view)
     1
   end
 
 
-  def tableView(tableView, numberOfRowsInSection: section)
+  def tableView(table_view, numberOfRowsInSection: section)
     @rules.count
   end
 
 
-  def getCellTextAtIndexPath(indexPath)
-    @rules[indexPath.row].text
+  def getCellTextAtIndexPath(index_path)
+    @rules[index_path.row].text
   end
 
 
-  def bodyHeightFor(text)
-    cellFont = UIFont.fontWithName("Helvetica", size: 18.0)
-    constraintSize = CGSizeMake(602, Float::MAX)
-    labelSize = text.sizeWithFont(cellFont, constrainedToSize: constraintSize, lineBreakMode: UILineBreakModeWordWrap)
-    labelSize.height
+  def body_height_for(text)
+    cell_font = UIFont.fontWithName("Helvetica", size: 18.0)
+    constraint_size = CGSizeMake(602, Float::MAX)
+    label_size = text.sizeWithFont(cell_font, constrainedToSize: constraint_size, lineBreakMode: UILineBreakModeWordWrap)
+    label_size.height
   end
 
 
-  def tableView(tableView, cellForRowAtIndexPath: indexPath)
-    cellIdentifier = "IpadDetailCell"
+  def tableView(table_view, cellForRowAtIndexPath: index_path)
+    cell_identifier = "IpadDetailCell"
 
-    cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
+    cell = table_view.dequeueReusableCellWithIdentifier(cell_identifier)
     if cell.nil?
-      NSBundle.mainBundle.loadNibNamed(cellIdentifier, owner: self, options: nil)
+      NSBundle.mainBundle.loadNibNamed(cell_identifier, owner: self, options: nil)
       cell = tableCell
       tableCell = nil
     end
 
-    headerLabel =  cell.viewWithTag(1)
-    bodyLabel = cell.viewWithTag(2)
+    header_label =  cell.viewWithTag(1)
+    body_label = cell.viewWithTag(2)
 
-    clause = rules[indexPath.row]
-    headerLabel.text = "#{clause.subsection}.#{clause.subsubsection}"
-    bodyLabel.text = clause.body
+    clause = rules[index_path.row]
+    header_label.text = "#{clause.subsection}.#{clause.subsubsection}"
+    body_label.text = clause.body
 
-    bodyLabel.lineBreakMode = UILineBreakModeWordWrap
-    bodyLabel.numberOfLines = 0
-    bodyLabel.font = UIFont.fontWithName("Helvetica", size: 18.0)
-    bodyFrame = bodyLabel.frame
-    bodyFrame.size.height = bodyHeightFor(clause.body)
-    bodyLabel.frame = bodyFrame
+    body_label.lineBreakMode = UILineBreakModeWordWrap
+    body_label.numberOfLines = 0
+    body_label.font = UIFont.fontWithName("Helvetica", size: 18.0)
+    body_frame = body_label.frame
+    body_frame.size.height = body_height_for(clause.body)
+    body_label.frame = body_frame
     cell
   end
 
 
-  def heightForRow(row)
-    bodyHeightFor(@rules[row].body) + 54
+  def height_for_row(row)
+    body_height_for(@rules[row].body) + 54
   end
 
 
-  def tableView(tableView, heightForRowAtIndexPath: indexPath)
-    heightForRow(indexPath.row)
+  def tableView(table_view, heightForRowAtIndexPath: index_path)
+    height_for_row(index_path.row)
   end
 
 
   def tableViewHeight
-    (0...@rules.count).inject(0.0) {|height, i| height + heightForRow(i) }
+    (0...@rules.count).inject(0.0) {|height, i| height + height_for_row(i) }
   end
 
 
-  def tableView(tableView, didSelectRowAtIndexPath: indexPath)
-    clause = @rules[indexPath.row]
-    moreRules = delegate.database.get_rules_referenced_by_rule(clause)
+  def tableView(table_view, didSelectRowAtIndexPath: index_path)
+    clause = @rules[index_path.row]
+    more_rules = delegate.database.get_rules_referenced_by_rule(clause)
 
-    if moreRules.count > 0
-      popOverRules = IpadRulePopOverTableViewController.alloc.init
-      popOverRules.rules = moreRules
-      popOverRules.delegate = delegate
+    unless more_rules.empty?
+      pop_over_rules = IpadRulePopOverTableViewController.alloc.init
+      pop_over_rules.rules = more_rules
+      pop_over_rules.delegate = delegate
       f = view.frame
-      popOverRules.view.frame = f
+      pop_over_rules.view.frame = f
 
-      @popOver = UIPopoverController.alloc.initWithContentViewController(popOverRules)
-      @popOver.delegate = self
-      @popOver.popoverContentSize = f.size
-      selectedCell = tableView.cellForRowAtIndexPath(indexPath)
+      @pop_over = UIPopoverController.alloc.initWithContentViewController(pop_over_rules)
+      @pop_over.delegate = self
+      @pop_over.popoverContentSize = f.size
+      selected_cell = tableView.cellForRowAtIndexPath(index_path)
 
-      @popOver.presentPopoverFromRect(selectedCell.frame, inView: tableView, permittedArrowDirections: UIPopoverArrowDirectionAny, animated: true)
+      @pop_over.presentPopoverFromRect(selected_cell.frame, inView: table_view, permittedArrowDirections: UIPopoverArrowDirectionAny, animated: true)
     end
   end
 
 
-  def popoverControllerDidDismissPopover(popoverController)
+  def popoverControllerDidDismissPopover(popover_controller)
     view.deselectRowAtIndexPath(view.indexPathForSelectedRow, animated: true)
   end
 

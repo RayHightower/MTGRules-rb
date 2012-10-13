@@ -15,6 +15,16 @@ class IphoneGlossaryViewController < UITableViewController
   end
 
 
+  def shouldAutorotateToInterfaceOrientation(interface_orientation)
+    true
+  end
+
+
+  def didRotateFromInterfaceOrientation(from_interface_orientation)
+    view.reloadData
+  end
+
+
   def glossary=(new_glossary)
     if @glossary != new_glossary
       @glossary = new_glossary
@@ -72,7 +82,7 @@ class IphoneGlossaryViewController < UITableViewController
   end
 
 
-  def tableView(tableView, numberOfRowsInSection: section)
+  def tableView(table_view, numberOfRowsInSection: section)
     @glossary_entries[section].count
   end
 
@@ -99,20 +109,20 @@ class IphoneGlossaryViewController < UITableViewController
       tableCell = nil;
     end
 
-    headerLabel = cell.viewWithTag(1)
-    bodyLabel = cell.viewWithTag(2)
+    header_label = cell.viewWithTag(1)
+    body_label = cell.viewWithTag(2)
 
     entry = entry_at_index_path(index_path)
-    headerLabel.text = entry.name
-    bodyLabel.text = entry.body
+    header_label.text = entry.name
+    body_label.text = entry.body
 
-    bodyLabel.lineBreakMode = UILineBreakModeWordWrap
-    bodyLabel.numberOfLines = 0
-    bodyLabel.font = UIFont.fontWithName("Helvetica", size: 14.0)
-    bodyFrame = bodyLabel.frame
-    bodyFrame.origin.y = 30
-    bodyFrame.size.height = self.body_height_for(bodyLabel.text) + 30
-    bodyLabel.frame = bodyFrame
+    body_label.lineBreakMode = UILineBreakModeWordWrap
+    body_label.numberOfLines = 0
+    body_label.font = UIFont.fontWithName("Helvetica", size: 14.0)
+    body_frame = body_label.frame
+    body_frame.origin.y = 30
+    body_frame.size.height = self.body_height_for(body_label.text) + 30
+    body_label.frame = body_frame
     cell
   end
 
@@ -128,16 +138,16 @@ class IphoneGlossaryViewController < UITableViewController
     referenced_rules = delegate.database.get_rules_referenced_by_glossary_term(entry.name)
 
     if referenced_rules.count > 0
-      ruleViewController = IphoneRuleViewController.alloc.initWithNibName("IphoneRuleView", bundle: nil)
-      ruleViewController.rules = referenced_rules
-      ruleViewController.delegate = delegate
-      ruleViewController.title = "Rules"
-      navigationController().pushViewController(ruleViewController, animated: true)
+      rule_view_controller = IphoneRuleViewController.alloc.initWithNibName("IphoneRuleView", bundle: nil)
+      rule_view_controller.rules = referenced_rules
+      rule_view_controller.delegate = delegate
+      rule_view_controller.title = "Rules"
+      navigationController.pushViewController(rule_view_controller, animated: true)
     end
   end
 
 
-  def tableView(tableView, heightForRowAtIndexPath: index_path)
+  def tableView(table_view, heightForRowAtIndexPath: index_path)
     body_height_for(self.get_cell_text_at_index_path(index_path)) + 60
   end
 

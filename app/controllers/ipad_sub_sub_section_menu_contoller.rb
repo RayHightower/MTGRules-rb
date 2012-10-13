@@ -1,5 +1,5 @@
 class IpadSubSubSectionMenuController < UITableViewController
-  attr_accessor :delegate, :contents, :detailViewController
+  attr_accessor :delegate, :contents, :detail_view_controller
 
 
   def viewDidLoad
@@ -8,30 +8,30 @@ class IpadSubSubSectionMenuController < UITableViewController
   end
 
 
-  def shouldAutorotateToInterfaceOrientation(interfaceOrientation)
+  def shouldAutorotateToInterfaceOrientation(interface_orientation)
     true
   end
 
 
-  def numberOfSectionsInTableView(tableView)
+  def numberOfSectionsInTableView(table_view)
     1
   end
 
 
-  def tableView(tableView, numberOfRowsInSection: section)
+  def tableView(table_view, numberOfRowsInSection: section)
     contents.size
   end
 
 
-  def tableView(tableView, cellForRowAtIndexPath: indexPath)
-    cellIdentifier = "Cell"
+  def tableView(table_view, cellForRowAtIndexPath: index_path)
+    cell_identifier = "Cell"
 
-    cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
+    cell = table_view.dequeueReusableCellWithIdentifier(cell_identifier)
     if cell.nil?
-      cell = UITableViewCell.alloc.initWithStyle(UITableViewCellStyleDefault, reuseIdentifier: cellIdentifier)
+      cell = UITableViewCell.alloc.initWithStyle(UITableViewCellStyleDefault, reuseIdentifier: cell_identifier)
     end
 
-    child = contents[indexPath.row]
+    child = contents[index_path.row]
     cell.textLabel.text = child.text
 
     cell
@@ -40,13 +40,13 @@ class IpadSubSubSectionMenuController < UITableViewController
 
   def showRulesFor(entry)
     rules = delegate.database.get_rules_for_subsection(entry.subsection, and_subsubsection: entry.subsubsection)
-    detailViewController.detail_item = rules
-    detailViewController.titleItem.title = "#{contents.text} - #{entry.text}"
+    @detail_view_controller.detail_item = rules
+    @detail_view_controller.titleItem.title = "#{contents.text} - #{entry.text}"
   end
 
 
-  def tableView(tableView, didSelectRowAtIndexPath: indexPath)
-    child = contents[indexPath.row]
+  def tableView(table_view, didSelectRowAtIndexPath: index_path)
+    child = contents[index_path.row]
     self.showRulesFor(child)
   end
 

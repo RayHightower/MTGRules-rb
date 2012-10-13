@@ -19,8 +19,7 @@ class RootViewController < UITableViewController
 
 
   def tableView(table_view, cellForRowAtIndexPath: index_path)
-    cell = table_view.dequeueReusableCellWithIdentifier("Cell")
-    cell = UITableViewCell.alloc.initWithStyle(UITableViewCellStyleDefault, reuseIdentifier: "Cell") if cell.nil?
+    cell = table_view.dequeueReusableCellWithIdentifier("Cell") || UITableViewCell.alloc.initWithStyle(UITableViewCellStyleDefault, reuseIdentifier: "Cell")
 
     child = contents[index_path.row]
     cell.accessoryType = child.has_children? ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone

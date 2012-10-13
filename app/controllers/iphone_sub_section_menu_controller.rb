@@ -10,6 +10,11 @@ class IphoneSubSectionMenuController < UITableViewController
   end
 
 
+  def shouldAutorotateToInterfaceOrientation(interface_orientation)
+    true
+  end
+
+
   def numberOfSectionsInTableView(tableView)
     1
   end

@@ -3,11 +3,19 @@ class IphoneRuleViewController < UITableViewController
 
   RULE_CELL_IDENTIFIER = "IphoneRuleCell"
 
-  attr_accessor :delegate
-  attr_accessor :tableCell
-  attr_accessor :rules
+  attr_accessor :delegate, :rules
 
   outlet :tableCell, UITableViewCell
+
+
+  def shouldAutorotateToInterfaceOrientation(interface_orientation)
+    true
+  end
+
+
+  def didRotateFromInterfaceOrientation(from_interface_orientation)
+    view.reloadData
+  end
 
 
   def numberOfSectionsInTableView(table_view)
@@ -21,10 +29,10 @@ class IphoneRuleViewController < UITableViewController
 
 
   def body_height_for(text)
-    cellFont = UIFont.fontWithName("Helvetica", size: 14.0)
-    constraintSize = CGSizeMake(self.view.frame.size.width - 40, Float::MAX)
-    labelSize = text.sizeWithFont(cellFont, constrainedToSize: constraintSize, lineBreakMode: UILineBreakModeWordWrap)
-    labelSize.height
+    cell_font = UIFont.fontWithName("Helvetica", size: 14.0)
+    constraint_size = CGSizeMake(self.view.frame.size.width - 40, Float::MAX)
+    label_size = text.sizeWithFont(cell_font, constrainedToSize: constraint_size, lineBreakMode: UILineBreakModeWordWrap)
+    label_size.height
   end
 
 
